@@ -33,7 +33,7 @@ public class AnimatorManager : MonoBehaviour
         {
             snapHorizontal = -0.5f;
         }
-        else if (horizontalMovement > -0.55f)
+        else if (horizontalMovement < -0.55f)
         {
             snapHorizontal = -1;
         }
@@ -56,7 +56,7 @@ public class AnimatorManager : MonoBehaviour
         {
             snapvertical = -0.5f;
         }
-        else if (verticalMovement > -0.55f)
+        else if (verticalMovement < -0.55f)
         {
             snapvertical = -1;
         }

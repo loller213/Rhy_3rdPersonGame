@@ -42,13 +42,14 @@ public class InputManager : MonoBehaviour
         HandleMovementInput();
     }
 
-    //Fix Bug here
+    
     private void HandleMovementInput()
     {
         verticalInput = movementInput.y;
         horizontalInput = movementInput.x;
         moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
 
+        //Fix Bug here
         animatorManager.UpdateAnimatorValues(0, moveAmount);
 
     }
