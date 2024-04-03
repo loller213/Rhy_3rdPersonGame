@@ -19,7 +19,6 @@ public class PlayerLocomotion : MonoBehaviour
     public float rotationSpeed = 15;
 
     public bool isSprinting;
-
     public bool isWalking;
 
     private void Awake()
