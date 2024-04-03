@@ -38,13 +38,19 @@ public class PushBox : MonoBehaviour
         roundedDirection.y = Mathf.Round(direction.y);
         roundedDirection.z = Mathf.Round(direction.z);
 
-        // Ensure only one axis is non-zero if diagonal pushes are not allowed
+        // Ensure only one axis is non-zero
         if (!allowDiagonalPush)
         {
             if (Mathf.Abs(roundedDirection.x) > 0 && Mathf.Abs(roundedDirection.z) > 0)
             {
-                roundedDirection.x = 0;
-                roundedDirection.z = 0;
+                if (Mathf.Abs(direction.x) > Mathf.Abs(direction.z))
+                {
+                    roundedDirection.z = 0;
+                }
+                else
+                {
+                    roundedDirection.x = 0;
+                }
             }
         }
 

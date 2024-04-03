@@ -1270,7 +1270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b01a49f74c506e489761495c37c5c74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 1, y: 0, z: 0}
+  gridSize: {x: 2, y: 2, z: 2}
   allowDiagonalPush: 0
 --- !u!65 &508203322
 BoxCollider:
@@ -3071,7 +3071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3056148957914525683, guid: 60977f6d9ec0f7a45ab96da03e6fc570, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4677976562127541798, guid: 60977f6d9ec0f7a45ab96da03e6fc570, type: 3}
       propertyPath: m_LocalPosition.x
