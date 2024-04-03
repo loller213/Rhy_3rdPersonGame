@@ -486,7 +486,7 @@ MonoBehaviour:
   rotationSpeed: 15
   isSprinting: 0
   isWalking: 0
-  isGrounded: 0
+  isGrounded: 1
 --- !u!114 &195220825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2822,15 +2822,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953050792017015323, guid: e2de4a7499cde694ea3bdd17c3561665, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.96
+      value: -3.14
       objectReference: {fileID: 0}
     - target: {fileID: 5953050792017015323, guid: e2de4a7499cde694ea3bdd17c3561665, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.72
+      value: 5.983
       objectReference: {fileID: 0}
     - target: {fileID: 5953050792017015323, guid: e2de4a7499cde694ea3bdd17c3561665, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.96
+      value: -6.98
       objectReference: {fileID: 0}
     - target: {fileID: 5953050792017015323, guid: e2de4a7499cde694ea3bdd17c3561665, type: 3}
       propertyPath: m_LocalRotation.w
