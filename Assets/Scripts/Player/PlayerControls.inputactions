@@ -202,6 +202,45 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "PlayerActions",
+            "id": "54f73c10-d616-428c-ac72-f917b209ecaf",
+            "actions": [
+                {
+                    "name": "B",
+                    "type": "Button",
+                    "id": "efb8f44c-5c9f-4c7f-9597-4fbf0bd6e8ad",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9a0557ca-f9f3-44fb-8774-e83335d4ade1",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "37b64c9e-2324-4519-ab39-9617e42803c4",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

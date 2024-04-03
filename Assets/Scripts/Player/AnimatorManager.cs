@@ -15,7 +15,7 @@ public class AnimatorManager : MonoBehaviour
         vertical = Animator.StringToHash("Vertical");
     }
 
-    public void UpdateAnimatorValues(float horizontalMovement, float verticalMovement)
+    public void UpdateAnimatorValues(float horizontalMovement, float verticalMovement, bool isSprinting)
     {
         //Float Snapping
         float snapHorizontal, snapvertical;
@@ -42,7 +42,6 @@ public class AnimatorManager : MonoBehaviour
             snapHorizontal = 0;
         }
         #endregion
-
         #region Snapped Vertical
         if (verticalMovement > 0 && verticalMovement < 0.55f)
         {
@@ -65,6 +64,12 @@ public class AnimatorManager : MonoBehaviour
             snapvertical = 0;
         }
         #endregion
+
+        if (isSprinting)
+        {
+            snapHorizontal = horizontalMovement;
+            snapvertical = 2;
+        }
 
         animator.SetFloat(horizontal, snapHorizontal, 0.1f, Time.deltaTime);
         animator.SetFloat(vertical, snapvertical, 0.1f, Time.deltaTime);

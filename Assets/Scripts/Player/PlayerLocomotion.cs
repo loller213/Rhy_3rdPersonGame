@@ -12,14 +12,26 @@ public class PlayerLocomotion : MonoBehaviour
 
     Rigidbody playerRB;
 
-    public float movementSpeed = 7;
+    [Header("Movement Speed")]
+    public float walkingSpeed = 1.5f;
+    public float runningSpeed = 4;
+    public float sprintingSpeed = 5;
     public float rotationSpeed = 15;
+
+    public bool isSprinting;
+
+    public bool isWalking;
 
     private void Awake()
     {
         inputManager = GetComponent<InputManager>();
         playerRB = GetComponent<Rigidbody>();
         cameraObject = Camera.main.transform;
+    }
+
+    private void Start()
+    {
+        isWalking = false;
     }
 
     public void HandleAllMovement()
@@ -35,7 +47,40 @@ public class PlayerLocomotion : MonoBehaviour
         moveDirection.Normalize();
         moveDirection.y = 0;
 
-        moveDirection = moveDirection * movementSpeed;
+        //if (Input.GetKeyDown(KeyCode.LeftControl) && isWalking)
+        //{
+        //    isWalking = false;
+        //}
+        //else if (Input.GetKeyDown(KeyCode.LeftControl) && !isWalking)
+        //{
+        //    isWalking = true;
+        //}
+
+        //if (isWalking)
+        //{
+        //    inputManager.moveAmount = 0.5f;
+        //    moveDirection = moveDirection * walkingSpeed;
+        //}
+        //else
+        //{
+        //    moveDirection = moveDirection * runningSpeed;
+        //}
+
+        if (isSprinting)
+        {
+            moveDirection = moveDirection * sprintingSpeed;
+        }
+        else
+        {
+            if (inputManager.moveAmount >= 0.5f)
+            {
+                moveDirection = moveDirection * runningSpeed;
+            }
+            else
+            {
+                moveDirection = moveDirection * walkingSpeed;
+            }
+        }
 
         Vector3 movementVelocity = moveDirection;
         playerRB.velocity = movementVelocity;
