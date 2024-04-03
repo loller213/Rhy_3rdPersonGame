@@ -20,7 +20,8 @@ public class InputManager : MonoBehaviour
     public float verticalInput;
     public float horizontalInput;
 
-    public bool b_input;
+    public bool sprint_input;
+    public bool walk_input;
 
     private void Awake()
     {
@@ -37,8 +38,11 @@ public class InputManager : MonoBehaviour
             playerControls.PlayerMovement.Movement.performed += i => movementInput = i.ReadValue<Vector2>();
             playerControls.PlayerMovement.Camera.performed += i => cameraInput = i.ReadValue<Vector2>();
 
-            playerControls.PlayerActions.B.performed += i => b_input = true;
-            playerControls.PlayerActions.B.canceled += i => b_input = false;
+            playerControls.PlayerActions.Sprint.performed += i => sprint_input = true;
+            playerControls.PlayerActions.Sprint.canceled += i => sprint_input = false;
+
+            playerControls.PlayerActions.Walk.performed += i => walk_input = true;
+            playerControls.PlayerActions.Walk.canceled += i => walk_input = false;
         }
 
         playerControls.Enable();
@@ -54,6 +58,7 @@ public class InputManager : MonoBehaviour
     {
         HandleMovementInput();
         HandleSprint();
+        HandleWalk();
     }
 
     
@@ -67,13 +72,25 @@ public class InputManager : MonoBehaviour
 
 
         moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
-        animatorManager.UpdateAnimatorValues(0, moveAmount, playerLocomotion.isSprinting);
+        animatorManager.UpdateAnimatorValues(0, moveAmount, playerLocomotion.isSprinting, playerLocomotion.isWalking);
 
+    }
+
+    private void HandleWalk()
+    {
+        if (walk_input && moveAmount > 0.5f)
+        {
+            playerLocomotion.isWalking = true;
+        }
+        else
+        {
+            playerLocomotion.isWalking = false;
+        }
     }
 
     private void HandleSprint()
     {
-        if (b_input && moveAmount > 0.5f)
+        if (sprint_input && moveAmount > 0.5f)
         {
             playerLocomotion.isSprinting = true;
         }
