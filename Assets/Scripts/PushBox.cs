@@ -40,14 +40,29 @@ public class PushBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Calculate the direction of the push based on the player's movement
-            Vector3 playerMovementDirection = collision.gameObject.transform.forward;
+            // Calculate the direction of the push based on the relative position of the player to the box
+            Vector3 playerRelativePosition = transform.InverseTransformPoint(collision.transform.position);
+
+            Vector3 pushDirection = Vector3.zero;
+
+            // Determine the direction based on the player's position relative to the box
+            if (Mathf.Abs(playerRelativePosition.x) > Mathf.Abs(playerRelativePosition.z))
+            {
+                pushDirection = new Vector3(Mathf.Sign(playerRelativePosition.x), 0f, 0f);
+            }
+            else
+            {
+                pushDirection = new Vector3(0f, 0f, Mathf.Sign(playerRelativePosition.z));
+            }
+
+            // Invert the direction to move opposite to the player's side
+            pushDirection *= -1f;
 
             // Round the direction to the nearest grid direction
-            Vector3 pushDirection = RoundToGridDirection(playerMovementDirection);
+            Vector3 roundedDirection = RoundToGridDirection(pushDirection);
 
             // Apply the push
-            MoveToNextGridCell(pushDirection);
+            MoveToNextGridCell(roundedDirection);
         }
     }
 
@@ -86,7 +101,7 @@ public class PushBox : MonoBehaviour
             Vector3 nextPosition = transform.position + Vector3.Scale(gridSize, direction);
 
             // Perform a raycast to check for obstacles in the next position
-            RaycastHit hit;                                                //gridSize.magnitude
+            RaycastHit hit;
             if (Physics.Raycast(transform.position, direction, out hit, gridSize.magnitude/2, obstacleLayer))
             {
                 // If the raycast hits an obstacle, stop moving
