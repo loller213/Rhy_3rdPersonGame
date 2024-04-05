@@ -6,12 +6,34 @@ public class PushBox : MonoBehaviour
 {
     public Vector3 gridSize = new Vector3(5f, 0f, 5f); // Size of each grid cell
     public bool allowDiagonalPush = false; // Whether diagonal pushes are allowed
+    public LayerMask obstacleLayer; // Layer mask to specify which layers are considered obstacles
+    public float moveSpeed = 5f; // Speed of the movement
 
     private Rigidbody rb;
+    private Vector3 targetPosition;
+    private bool isMoving = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        targetPosition = transform.position;
+    }
+
+    void Update()
+    {
+        if (isMoving)
+        {
+            // Move towards the target position
+            Vector3 newPosition = Vector3.MoveTowards(rb.position, targetPosition, moveSpeed * Time.deltaTime);
+            rb.MovePosition(newPosition);
+
+            // Check if reached the target position
+            if (Vector3.Distance(rb.position, targetPosition) < 0.01f)
+            {
+                rb.MovePosition(targetPosition);
+                isMoving = false;
+            }
+        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -59,9 +81,21 @@ public class PushBox : MonoBehaviour
 
     void MoveToNextGridCell(Vector3 direction)
     {
-        Vector3 nextPosition = transform.position + Vector3.Scale(gridSize, direction);
+        if (!isMoving)
+        {
+            Vector3 nextPosition = transform.position + Vector3.Scale(gridSize, direction);
 
-        // Move the box to the next grid cell
-        rb.MovePosition(nextPosition);
+            // Perform a raycast to check for obstacles in the next position
+            RaycastHit hit;                                                //gridSize.magnitude
+            if (Physics.Raycast(transform.position, direction, out hit, gridSize.magnitude/2, obstacleLayer))
+            {
+                // If the raycast hits an obstacle, stop moving
+                return;
+            }
+
+            // Move towards the next position
+            targetPosition = nextPosition;
+            isMoving = true;
+        }
     }
 }
