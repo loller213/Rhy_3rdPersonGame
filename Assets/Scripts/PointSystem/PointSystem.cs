@@ -7,8 +7,8 @@ public class PointSystem : MonoBehaviour
     private static PointSystem _instance;
     public static PointSystem Instance => _instance;
 
-    private int pointsCovered;
-    private int toAdd;
+    [SerializeField] private int pointsCovered;
+    private int modifyer;
     public int getPtsCvrd;
 
     private void Awake()
@@ -28,19 +28,19 @@ public class PointSystem : MonoBehaviour
 
     private void Start()
     {
-        toAdd = 1;
+        modifyer = 1;
         pointsCovered = 0;
     }
 
 
     public void addPoint()
     {
-        pointsCovered += toAdd;
+        pointsCovered += modifyer;
     }
 
     public void subtractPoint()
     {
-        pointsCovered -= toAdd;
+        pointsCovered -= modifyer;
     }
 
     private void OnDestroy()

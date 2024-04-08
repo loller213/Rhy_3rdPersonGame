@@ -20,7 +20,7 @@ public class PointArea : MonoBehaviour
         if (other.CompareTag("BOX"))
         {
             EventManager.ON_AREA_ENTER?.Invoke();
-            Debug.Log("Covered Add: " + PointSystem.Instance.GetPointsCovered());
+            Debug.Log("(On add) Covered: " + PointSystem.Instance.GetPointsCovered());
         }
 
     }
@@ -30,7 +30,7 @@ public class PointArea : MonoBehaviour
         if (other.CompareTag("BOX"))
         {
             EventManager.ON_AREA_LEAVE?.Invoke();
-            Debug.Log("Covered Sub: " + PointSystem.Instance.getPtsCvrd);
+            Debug.Log("(On sub) Covered: " + PointSystem.Instance.GetPointsCovered());
         }
     }
 
