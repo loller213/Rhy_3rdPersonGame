@@ -8,6 +8,7 @@ public class PointSystem : MonoBehaviour
     public static PointSystem Instance => _instance;
 
     [SerializeField] private int pointsCovered;
+
     private int modifyer;
     public int getPtsCvrd;
 
