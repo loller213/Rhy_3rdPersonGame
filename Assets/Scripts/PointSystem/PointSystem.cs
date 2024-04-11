@@ -33,15 +33,16 @@ public class PointSystem : MonoBehaviour
         pointsCovered = 0;
     }
 
-
     public void addPoint()
     {
         pointsCovered += modifyer;
+        CheckLevelRequirement();
     }
 
     public void subtractPoint()
     {
         pointsCovered -= modifyer;
+        CheckLevelRequirement();
     }
 
     private void OnDestroy()
@@ -54,6 +55,19 @@ public class PointSystem : MonoBehaviour
     {
         getPtsCvrd = pointsCovered;
         return getPtsCvrd;
+    }
+
+    private void CheckLevelRequirement()
+    {
+        if (CurrentStageRequirement.Instance.getLevelRequirement() == pointsCovered)
+        {
+            Debug.Log("Win!");
+        }
+        else
+        {
+
+            Debug.Log("Missing Area!");
+        }
     }
 
 }
