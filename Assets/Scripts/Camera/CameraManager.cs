@@ -27,8 +27,20 @@ public class CameraManager : MonoBehaviour
     public float minimumPivotAngle = -35;
     public float maximumPivotAngle = 35;
 
+    private static CameraManager _instance;
+    public static CameraManager Instance => _instance;
+
     private void Awake()
     {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else if (_instance != this)
+        {
+            Destroy(gameObject);
+        }
+
         targetTransform = FindObjectOfType<PlayerManager>().transform;
         inputManager = FindObjectOfType<InputManager>();
         cameraTransform = Camera.main.transform;
@@ -102,16 +114,24 @@ public class CameraManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) && Cursor.lockState == CursorLockMode.Confined)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            UnlockMouse();
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && Cursor.lockState == CursorLockMode.None)
         {
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = false;
+            LockMouse();
         }
+    }
 
+    public void LockMouse()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+    }
 
+    public void UnlockMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
 }

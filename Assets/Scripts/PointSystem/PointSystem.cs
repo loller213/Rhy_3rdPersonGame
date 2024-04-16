@@ -71,9 +71,10 @@ public class PointSystem : MonoBehaviour
         {
             win = true;
             if (win)
-            {
-                winScreen.SetActive(true);
+            {                
                 levelWin = win;
+                CameraManager.Instance.UnlockMouse();
+                winScreen.SetActive(true);
             }
         }
         else if (CurrentStageRequirement.Instance.getLevelRequirement() != pointsCovered)
