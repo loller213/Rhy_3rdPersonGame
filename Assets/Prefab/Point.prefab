@@ -164,55 +164,55 @@ MonoBehaviour:
   - m_Vertices: 0b0000000e00000012000000
   m_SharedTextures: []
   m_Positions:
-  - {x: -1, y: -0.25, z: 1}
-  - {x: 1, y: -0.25, z: 1}
-  - {x: -1, y: 0.25, z: 1}
-  - {x: 1, y: 0.25, z: 1}
-  - {x: 1, y: -0.25, z: 1}
-  - {x: 1, y: -0.25, z: -1}
-  - {x: 1, y: 0.25, z: 1}
-  - {x: 1, y: 0.25, z: -1}
-  - {x: 1, y: -0.25, z: -1}
-  - {x: -1, y: -0.25, z: -1}
-  - {x: 1, y: 0.25, z: -1}
-  - {x: -1, y: 0.25, z: -1}
-  - {x: -1, y: -0.25, z: -1}
-  - {x: -1, y: -0.25, z: 1}
-  - {x: -1, y: 0.25, z: -1}
-  - {x: -1, y: 0.25, z: 1}
-  - {x: -1, y: 0.25, z: 1}
-  - {x: 1, y: 0.25, z: 1}
-  - {x: -1, y: 0.25, z: -1}
-  - {x: 1, y: 0.25, z: -1}
-  - {x: -1, y: -0.25, z: -1}
-  - {x: 1, y: -0.25, z: -1}
-  - {x: -1, y: -0.25, z: 1}
-  - {x: 1, y: -0.25, z: 1}
+  - {x: -2, y: -0.25, z: 2}
+  - {x: 2, y: -0.25, z: 2}
+  - {x: -2, y: 0.25, z: 2}
+  - {x: 2, y: 0.25, z: 2}
+  - {x: 2, y: -0.25, z: 2}
+  - {x: 2, y: -0.25, z: -2}
+  - {x: 2, y: 0.25, z: 2}
+  - {x: 2, y: 0.25, z: -2}
+  - {x: 2, y: -0.25, z: -2}
+  - {x: -2, y: -0.25, z: -2}
+  - {x: 2, y: 0.25, z: -2}
+  - {x: -2, y: 0.25, z: -2}
+  - {x: -2, y: -0.25, z: -2}
+  - {x: -2, y: -0.25, z: 2}
+  - {x: -2, y: 0.25, z: -2}
+  - {x: -2, y: 0.25, z: 2}
+  - {x: -2, y: 0.25, z: 2}
+  - {x: 2, y: 0.25, z: 2}
+  - {x: -2, y: 0.25, z: -2}
+  - {x: 2, y: 0.25, z: -2}
+  - {x: -2, y: -0.25, z: -2}
+  - {x: 2, y: -0.25, z: -2}
+  - {x: -2, y: -0.25, z: 2}
+  - {x: 2, y: -0.25, z: 2}
   m_Textures0:
-  - {x: 1, y: -0.25}
-  - {x: -1, y: -0.25}
-  - {x: 1, y: 0.25}
-  - {x: -1, y: 0.25}
-  - {x: 1, y: -0.25}
-  - {x: -1, y: -0.25}
-  - {x: 1, y: 0.25}
-  - {x: -1, y: 0.25}
-  - {x: 1, y: -0.25}
-  - {x: -1, y: -0.25}
-  - {x: 1, y: 0.25}
-  - {x: -1, y: 0.25}
-  - {x: 1, y: -0.25}
-  - {x: -1, y: -0.25}
-  - {x: 1, y: 0.25}
-  - {x: -1, y: 0.25}
-  - {x: -1, y: 1}
-  - {x: 1, y: 1}
-  - {x: -1, y: -1}
-  - {x: 1, y: -1}
-  - {x: 1, y: -1}
-  - {x: -1, y: -1}
-  - {x: 1, y: 1}
-  - {x: -1, y: 1}
+  - {x: 2, y: -0.25}
+  - {x: -2, y: -0.25}
+  - {x: 2, y: 0.25}
+  - {x: -2, y: 0.25}
+  - {x: 2, y: -0.25}
+  - {x: -2, y: -0.25}
+  - {x: 2, y: 0.25}
+  - {x: -2, y: 0.25}
+  - {x: 2, y: -0.25}
+  - {x: -2, y: -0.25}
+  - {x: 2, y: 0.25}
+  - {x: -2, y: 0.25}
+  - {x: 2, y: -0.25}
+  - {x: -2, y: -0.25}
+  - {x: 2, y: 0.25}
+  - {x: -2, y: 0.25}
+  - {x: -2, y: 2}
+  - {x: 2, y: 2}
+  - {x: -2, y: -2}
+  - {x: 2, y: -2}
+  - {x: 2, y: -2}
+  - {x: -2, y: -2}
+  - {x: 2, y: 2}
+  - {x: -2, y: 2}
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1202
+  m_VersionIndex: 1238
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -268,14 +268,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 3465696020317077504
-  m_Size: {x: -2, y: 0.5, z: -2}
+  m_Size: {x: -4, y: 0.5, z: -4}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 0
   m_PivotPosition: {x: 0, y: 0, z: 0}
-  m_UnmodifiedMeshVersion: 1193
+  m_UnmodifiedMeshVersion: 1235
   m_ShapeBox:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 1, y: 0.25, z: 1}
+    m_Extent: {x: 2, y: 0.25, z: 2}
   references:
     version: 2
     RefIds:
@@ -302,7 +302,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7d33fe79ae7d9ea4985fa2e514ff4fee, type: 2}
+  - {fileID: 2100000, guid: 4972b46b670d786498cdbef4f37d2565, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -344,12 +344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7574d0e5edce4a2448f8bfa25feae806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addCovered:
-    m_PersistentCalls:
-      m_Calls: []
-  subCovered:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &5326077712925442325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -369,5 +363,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0002072, y: 0.5, z: 1.0116692}
-  m_Center: {x: -0.0020395517, y: 0, z: -0.00025558472}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}

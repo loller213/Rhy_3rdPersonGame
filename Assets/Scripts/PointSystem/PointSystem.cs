@@ -8,9 +8,12 @@ public class PointSystem : MonoBehaviour
     public static PointSystem Instance => _instance;
 
     [SerializeField] private int pointsCovered;
+    [SerializeField] private GameObject winScreen;
 
     private int modifyer;
+    [SerializeField] private bool win;
     public int getPtsCvrd;
+    
 
     private void Awake()
     {
@@ -29,6 +32,8 @@ public class PointSystem : MonoBehaviour
 
     private void Start()
     {
+        win = false;
+        winScreen.SetActive(false);
         modifyer = 1;
         pointsCovered = 0;
     }
@@ -61,11 +66,14 @@ public class PointSystem : MonoBehaviour
     {
         if (CurrentStageRequirement.Instance.getLevelRequirement() == pointsCovered)
         {
-            Debug.Log("Win!");
+            win = true;
+            if (win)
+            {
+                winScreen.SetActive(true);
+            }
         }
-        else
+        else if (CurrentStageRequirement.Instance.getLevelRequirement() != pointsCovered)
         {
-
             Debug.Log("Missing Area!");
         }
     }

@@ -31,6 +31,7 @@ public class CurrentStageRequirement : MonoBehaviour
     private void Start()
     {
         SetLevelReq();
+        getLevelRequirement();
     }
 
     #region SetLevelRequirement
@@ -43,8 +44,9 @@ public class CurrentStageRequirement : MonoBehaviour
         //CheckScene
         switch (scene.name.ToString()) {
 
-            case "Level1" or "SampleScene":
-                levelRequirement = 2;
+            case "Level1":
+            case "SampleScene":
+                levelRequirement = 1;
                 break;
 
             case "Level2":
@@ -56,11 +58,11 @@ public class CurrentStageRequirement : MonoBehaviour
                 break;
 
             case "Level4":
-                levelRequirement = 2;
+                levelRequirement = 3;
                 break;
 
             case "Level5":
-                levelRequirement = 2;
+                levelRequirement = 4;
                 break;
 
             case "Level6":
