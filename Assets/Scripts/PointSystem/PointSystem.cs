@@ -11,7 +11,9 @@ public class PointSystem : MonoBehaviour
     [SerializeField] private GameObject winScreen;
 
     private int modifyer;
-    [SerializeField] private bool win;
+    private bool win;
+
+    public bool levelWin;
     public int getPtsCvrd;
     
 
@@ -33,6 +35,7 @@ public class PointSystem : MonoBehaviour
     private void Start()
     {
         win = false;
+        levelWin = false;
         winScreen.SetActive(false);
         modifyer = 1;
         pointsCovered = 0;
@@ -70,12 +73,19 @@ public class PointSystem : MonoBehaviour
             if (win)
             {
                 winScreen.SetActive(true);
+                levelWin = win;
             }
         }
         else if (CurrentStageRequirement.Instance.getLevelRequirement() != pointsCovered)
         {
             Debug.Log("Missing Area!");
         }
+    }
+
+    public bool levelState()
+    {
+        levelWin = win;
+        return levelWin;
     }
 
 }

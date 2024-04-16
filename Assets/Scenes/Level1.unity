@@ -5364,7 +5364,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3de6ab3eeaa22aa4eb21f41e9eb29183, type: 2}
     - target: {fileID: 8476559221015066336, guid: 8bafcf2c4b13ff04dbc25fe37cdfc1e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8476559221015066336, guid: 8bafcf2c4b13ff04dbc25fe37cdfc1e2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6064,7 +6064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsCovered: 0
   winScreen: {fileID: 1591673161}
-  win: 0
+  levelWin: 0
   getPtsCvrd: 0
 --- !u!114 &2007859600
 MonoBehaviour:
@@ -6104,17 +6104,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: BOX
       objectReference: {fileID: 0}
+    - target: {fileID: 2243025841526263605, guid: 8bafcf2c4b13ff04dbc25fe37cdfc1e2, type: 3}
+      propertyPath: m_TagString
+      value: BOX
+      objectReference: {fileID: 0}
     - target: {fileID: 2741301570545271357, guid: 8bafcf2c4b13ff04dbc25fe37cdfc1e2, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1001591745}
-    - target: {fileID: 7534057090566065000, guid: 8bafcf2c4b13ff04dbc25fe37cdfc1e2, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3de6ab3eeaa22aa4eb21f41e9eb29183, type: 2}
     - target: {fileID: 8476559221015066336, guid: 8bafcf2c4b13ff04dbc25fe37cdfc1e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8476559221015066336, guid: 8bafcf2c4b13ff04dbc25fe37cdfc1e2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6270,6 +6270,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 619312973}
+    - target: {fileID: 5326077712925442325, guid: 11067c7b58b06054a97897b80c41e91b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5326077712925442325, guid: 11067c7b58b06054a97897b80c41e91b, type: 3}
+      propertyPath: m_Size.z
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7816987346570810987, guid: 11067c7b58b06054a97897b80c41e91b, type: 3}
       propertyPath: m_Name
       value: Point

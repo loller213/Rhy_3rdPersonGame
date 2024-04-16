@@ -15,6 +15,7 @@ public class PushBox : MonoBehaviour
 
     void Start()
     {
+        //gameObject.tag = "BOX";
         rb = GetComponent<Rigidbody>();
         targetPosition = transform.position;
     }
@@ -32,6 +33,7 @@ public class PushBox : MonoBehaviour
             {
                 rb.MovePosition(targetPosition);
                 isMoving = false;
+                //gameObject.tag = "BOX";
             }
         }
     }
@@ -111,6 +113,7 @@ public class PushBox : MonoBehaviour
             // Move towards the next position
             targetPosition = nextPosition;
             isMoving = true;
+            //gameObject.tag = "Move";
         }
     }
 }
