@@ -74,7 +74,7 @@ public class CurrentStageRequirement : MonoBehaviour
                 break;
 
             case "Level8":
-                levelRequirement = 1;
+                levelRequirement = 3;
                 break;
 
             case "Level9":
