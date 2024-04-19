@@ -86,23 +86,23 @@ public class CurrentStageRequirement : MonoBehaviour
                 break;
 
             case "Level11":
-                levelRequirement = 1;
+                levelRequirement = 2;
                 break;
 
             case "Level12":
-                levelRequirement = 1;
+                levelRequirement = 3;
                 break;
 
             case "Level13":
-                levelRequirement = 1;
+                levelRequirement = 2;
                 break;
 
             case "Level14":
-                levelRequirement = 1;
+                levelRequirement = 4;
                 break;
 
             case "Level15":
-                levelRequirement = 1;
+                levelRequirement = 4;
                 break;
         }
     }
