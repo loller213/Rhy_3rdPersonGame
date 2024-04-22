@@ -16,10 +16,24 @@ public class TimerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (!PointSystem.Instance.levelState())
+        {
+            Timer();
+        }
+    }
+
+    private void Timer()
+    {
         remainingTime += Time.deltaTime;
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timerTxt.text = string.Format("TIME: {0:00}:{1:00}", minutes, seconds);
+    }
+
+    private void CheckTimer()
+    {
+
     }
 }
