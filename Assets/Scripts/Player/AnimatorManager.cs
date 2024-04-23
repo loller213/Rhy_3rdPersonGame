@@ -23,6 +23,7 @@ public class AnimatorManager : MonoBehaviour
 
     public void UpdateAnimatorValues(float horizontalMovement, float verticalMovement, bool isSprinting, bool isWalking)
     {
+
         //Float Snapping
         float snapHorizontal, snapvertical;
 
@@ -82,8 +83,6 @@ public class AnimatorManager : MonoBehaviour
             snapHorizontal = horizontalMovement;
             snapvertical = 2;
         }
-
-
 
         animator.SetFloat(horizontal, snapHorizontal, 0.1f, Time.deltaTime);
         animator.SetFloat(vertical, snapvertical, 0.1f, Time.deltaTime);

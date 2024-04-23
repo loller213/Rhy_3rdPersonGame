@@ -74,6 +74,7 @@ public class PointSystem : MonoBehaviour
             {                
                 levelWin = win;
                 CameraManager.Instance.UnlockMouse();
+                TimerScript.Instance.CheckTimer();
                 winScreen.SetActive(true);
             }
         }

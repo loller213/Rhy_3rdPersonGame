@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 229436797797751239}
   - component: {fileID: 728724228577278422}
   - component: {fileID: 6104938113803587311}
+  - component: {fileID: 4834386627241998909}
   m_Layer: 0
   m_Name: Systems
   m_TagString: Untagged
@@ -76,7 +77,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelReq: 0
-  sceneName: 
+  tagName: Point
 --- !u!114 &6104938113803587311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,4 +91,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerTxt: {fileID: 0}
-  remainingTime: 0
+  timer: 0
+--- !u!114 &4834386627241998909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2346230049666575654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28400cb2d40f43a4eb3aec1a6a22c783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
