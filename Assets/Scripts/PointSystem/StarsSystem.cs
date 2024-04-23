@@ -44,6 +44,26 @@ public class StarsSystem : MonoBehaviour
         PlayerPrefs.DeleteAll();
     }
 
+    public void InitializeStars()
+    {
+        PlayerPrefs.SetInt("Level1_Stars", 0);
+        PlayerPrefs.SetInt("Level2_Stars", 0);
+        PlayerPrefs.SetInt("Level3_Stars", 0);
+        PlayerPrefs.SetInt("Level4_Stars", 0);
+        PlayerPrefs.SetInt("Level5_Stars", 0);
+        PlayerPrefs.SetInt("Level6_Stars", 0);
+        PlayerPrefs.SetInt("Level7_Stars", 0);
+        PlayerPrefs.SetInt("Level8_Stars", 0);
+        PlayerPrefs.SetInt("Level9_Stars", 0);
+        PlayerPrefs.SetInt("Level10_Stars", 0);
+        PlayerPrefs.SetInt("Level11_Stars", 0);
+        PlayerPrefs.SetInt("Level12_Stars", 0);
+        PlayerPrefs.SetInt("Level13_Stars", 0);
+        PlayerPrefs.SetInt("Level14_Stars", 0);
+        PlayerPrefs.SetInt("Level15_Stars", 0);
+    }
+
+    #region StarAssignment
     public void StarAssignment(int value)
     {
 
@@ -131,4 +151,5 @@ public class StarsSystem : MonoBehaviour
         }
 
     }
+    #endregion
 }
