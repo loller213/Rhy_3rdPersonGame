@@ -16,12 +16,12 @@ public class PushBox : MonoBehaviour
 
     void Start()
     {
-        //gameObject.tag = "BOX";
+        //gameObject.tag = "BOX"; 
         rb = GetComponent<Rigidbody>();
         targetPosition = transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (isMoving)
         {
