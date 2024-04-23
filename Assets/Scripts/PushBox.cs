@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]
 public class PushBox : MonoBehaviour
 {
     public Vector3 gridSize = new Vector3(5f, 0f, 5f); // Size of each grid cell
@@ -15,12 +16,12 @@ public class PushBox : MonoBehaviour
 
     void Start()
     {
-        //gameObject.tag = "BOX";
+        //gameObject.tag = "BOX"; 
         rb = GetComponent<Rigidbody>();
         targetPosition = transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (isMoving)
         {
