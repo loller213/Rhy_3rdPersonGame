@@ -10,7 +10,6 @@ public class LevelUnlock : MonoBehaviour
 
     private void Start()
     {
-        //StarsSystem.Instance.InitializeStars();
         UnlockAvailableLevels();
     }
 
