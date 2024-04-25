@@ -30,19 +30,11 @@ public class SceneManagerScript : MonoBehaviour
     //    }
     //}
 
-    public void LoadSceneSingle(string sceneName)
-    {
-        //SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
-        StartCoroutine(LoadSceneAsyncSingle(sceneName));
-    }
 
     public void LoadScene(string sceneName)
     {
-
         StartCoroutine(LoadSceneAsync(sceneName));
-
     }
-
 
     IEnumerator LoadSceneAsync(string sceneName)
     {
@@ -62,23 +54,6 @@ public class SceneManagerScript : MonoBehaviour
 
     }
 
-    IEnumerator LoadSceneAsyncSingle(string sceneName)
-    {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
-
-        LoadingScreen.SetActive(true);
-
-        while (!operation.isDone)
-        {
-            float progress = Mathf.Clamp01(operation.progress / 0.9f);
-
-            progressBar.value = progress;
-            progressCount.text = progress * 100 + "%";
-
-            yield return null;
-        }
-
-    }
 
     public void QuitGameMainMenu()
     {
