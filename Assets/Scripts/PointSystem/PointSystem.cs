@@ -9,7 +9,6 @@ public class PointSystem : MonoBehaviour
 
     [SerializeField] private int pointsCovered;
     [SerializeField] private GameObject winScreen;
-    [SerializeField] private GameObject restartButton;
 
     private int modifyer;
     private bool win;
@@ -38,7 +37,6 @@ public class PointSystem : MonoBehaviour
         win = false;
         levelWin = false;
         winScreen.SetActive(false);
-        restartButton.SetActive(false);
         modifyer = 1;
         pointsCovered = 0;
     }
@@ -76,11 +74,8 @@ public class PointSystem : MonoBehaviour
             {                
                 levelWin = win;
                 CameraManager.Instance.UnlockMouse();
-
-                Time.timeScale = 1; 
-                
+                TimerScript.Instance.CheckTimer();
                 winScreen.SetActive(true);
-                restartButton.SetActive(true);
             }
         }
         else if (CurrentStageRequirement.Instance.getLevelRequirement() != pointsCovered)
