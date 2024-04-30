@@ -5,8 +5,24 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
 
+    private static PauseManager _instance;
+    public static PauseManager Instance => _instance;
+
     public GameObject pauseScreen;
     [SerializeField] private bool isPaused;
+
+    private void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else if (_instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+    }
 
     private void Update()
     {
@@ -26,7 +42,7 @@ public class PauseManager : MonoBehaviour
 
     public void GamePaused()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0; 
         isPaused = true;
         pauseScreen.SetActive(true);
     }
@@ -36,6 +52,11 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
         pauseScreen.SetActive(false);
+    }
+
+    public bool PausedState()
+    {
+        return isPaused;
     }
 
     public void StageCounter()
