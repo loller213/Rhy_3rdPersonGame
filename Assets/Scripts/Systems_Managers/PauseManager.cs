@@ -38,4 +38,10 @@ public class PauseManager : MonoBehaviour
         pauseScreen.SetActive(false);
     }
 
+    public void StageCounter()
+    {
+
+    }
+
+
 }
