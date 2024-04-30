@@ -14,6 +14,8 @@ public class SceneManagerScript : MonoBehaviour
     public Slider progressBar;
     public TextMeshProUGUI progressCount;
 
+    private Scene scene;
+
     private void Awake()
     {
         Instance = this;
@@ -33,6 +35,13 @@ public class SceneManagerScript : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        StartCoroutine(LoadSceneAsync(sceneName));
+    }
+
+    public void RestartScene()
+    {
+        scene = SceneManager.GetActiveScene();
+        string sceneName = scene.name;
         StartCoroutine(LoadSceneAsync(sceneName));
     }
 

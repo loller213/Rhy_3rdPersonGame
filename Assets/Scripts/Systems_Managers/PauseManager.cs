@@ -24,6 +24,11 @@ public class PauseManager : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        GameUnpaused();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
