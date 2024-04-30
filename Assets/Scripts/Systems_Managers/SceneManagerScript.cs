@@ -21,18 +21,6 @@ public class SceneManagerScript : MonoBehaviour
         Instance = this;
     }
 
-    //public void SetActive(GameObject panel)
-    //{
-    //    if (panel.activeSelf)
-    //    {
-    //        panel.SetActive(false);
-    //    }else if (!panel.activeSelf)
-    //    {
-    //        panel.SetActive(true);
-    //    }
-    //}
-
-
     public void LoadScene(string sceneName)
     {
         StartCoroutine(LoadSceneAsync(sceneName));
@@ -49,8 +37,10 @@ public class SceneManagerScript : MonoBehaviour
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
 
+        //Open Loading Screen
         LoadingScreen.SetActive(true);
 
+        //Start loading bar
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / 0.9f);
