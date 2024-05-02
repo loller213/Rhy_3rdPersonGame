@@ -22,7 +22,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-        if (!PointSystem.Instance.levelState())
+        if (!PointSystem.Instance.levelState() && !PauseManager.Instance.PausedState())
         {
             inputManager.HandleAllInput();
         }
@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!PointSystem.Instance.levelState())
+        if (!PointSystem.Instance.levelState() && !PauseManager.Instance.PausedState())
         {
             playerLocomotion.HandleAllMovement();
         }
@@ -39,7 +39,7 @@ public class PlayerManager : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (!PointSystem.Instance.levelState())
+        if (!PointSystem.Instance.levelState() && !PauseManager.Instance.PausedState())
         {
             cameraManager.HandleAllCameraMovement();
             isInteracting = animator.GetBool("isInteracting");
