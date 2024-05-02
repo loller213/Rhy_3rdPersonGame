@@ -27,7 +27,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        BGMplay("MainTheme");
+        BGMplay("Theme_1");
     }
 
     public void BGMplay(string name)
@@ -69,11 +69,6 @@ public class AudioManager : MonoBehaviour
     public void SFXVolume(float volume)
     {
         sfxSrc.volume = volume;
-    }
-
-    private void loadMusicVolume()
-    {
-
     }
 
 }
