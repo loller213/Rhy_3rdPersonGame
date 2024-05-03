@@ -9,10 +9,10 @@ public class PauseManager : MonoBehaviour
     public static PauseManager Instance => _instance;
 
     public GameObject pauseScreen;
-    [SerializeField] private bool isPaused;
+    public bool isPaused;
 
     private void Awake()
-    {
+    {   
         if (_instance == null)
         {
             _instance = this;
@@ -33,15 +33,19 @@ public class PauseManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-
             if (!isPaused && !PointSystem.Instance.levelState())
             {
                 GamePaused();
-            }else if (isPaused && !PointSystem.Instance.levelState())
+                
+                if (!MapManager.Instance.mapScreen.activeSelf) return;
+            
+                MapManager.Instance.mapScreen.SetActive(false);
+                MapManager.Instance.isShown = false;
+            }
+            else if (isPaused && !PointSystem.Instance.levelState())
             {
                 GameUnpaused();
             }
-
         }
     }
 
@@ -68,6 +72,4 @@ public class PauseManager : MonoBehaviour
     {
 
     }
-
-
 }
