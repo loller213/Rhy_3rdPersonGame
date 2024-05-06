@@ -72,4 +72,9 @@ public class TimerScript : MonoBehaviour
             StarsSystem.Instance.StarAssignment(3);
         }
     }
+
+    public float ReturnTimer()
+    {
+        return timer;
+    }
 }
