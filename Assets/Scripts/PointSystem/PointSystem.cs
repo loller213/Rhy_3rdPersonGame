@@ -76,6 +76,7 @@ public class PointSystem : MonoBehaviour
                 CameraManager.Instance.UnlockMouse();
                 TimerScript.Instance.CheckTimer();
                 winScreen.SetActive(true);
+                WinSystem_UIController.Instance.ActivateWinconditionScreen();
             }
         }
         else if (CurrentStageRequirement.Instance.getLevelRequirement() != pointsCovered)
