@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour
     PlayerControls playerControls;
     PlayerLocomotion playerLocomotion;
     AnimatorManager animatorManager;
+    MapManager mapManager;
 
     public Vector2 movementInput;
     public Vector2 cameraInput;
@@ -27,6 +28,7 @@ public class InputManager : MonoBehaviour
     {
         animatorManager = GetComponent<AnimatorManager>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
+        mapManager = FindObjectOfType<MapManager>();
     }
 
     private void OnEnable()
@@ -56,6 +58,8 @@ public class InputManager : MonoBehaviour
 
     public void HandleAllInput()
     {
+        if (mapManager.isMapShown) return;
+        
         HandleMovementInput();
         HandleSprint();
         HandleWalk();

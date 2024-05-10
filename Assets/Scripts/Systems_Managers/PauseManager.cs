@@ -37,10 +37,10 @@ public class PauseManager : MonoBehaviour
             {
                 GamePaused();
                 
-                if (!MapManager.Instance.mapScreen.activeSelf) return;
-            
-                MapManager.Instance.mapScreen.SetActive(false);
-                MapManager.Instance.isShown = false;
+                // if (!MapManager.Instance.mapScreen.activeSelf) return;
+                //
+                // MapManager.Instance.mapScreen.SetActive(false);
+                // MapManager.Instance.isShown = false;
             }
             else if (isPaused && !PointSystem.Instance.levelState())
             {
