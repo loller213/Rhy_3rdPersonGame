@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6824709857024390668, guid: 77be83be8e2a4c646aeea4e8bf1fcfcb, type: 3}
       propertyPath: m_Name
-      value: Character Variant
+      value: Character_With_Flashlight
       objectReference: {fileID: 0}
     - target: {fileID: 7505100894934863045, guid: 77be83be8e2a4c646aeea4e8bf1fcfcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -188,10 +188,40 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7169521325480718012, guid: 77be83be8e2a4c646aeea4e8bf1fcfcb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4472414202645624330}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7508785927186936838, guid: 77be83be8e2a4c646aeea4e8bf1fcfcb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4476493023553786200}
   m_SourcePrefab: {fileID: 100100000, guid: 77be83be8e2a4c646aeea4e8bf1fcfcb, type: 3}
 --- !u!4 &6061928206374958531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7169521325480718012, guid: 77be83be8e2a4c646aeea4e8bf1fcfcb, type: 3}
   m_PrefabInstance: {fileID: 3989919060375362431}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6875759931808952185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7508785927186936838, guid: 77be83be8e2a4c646aeea4e8bf1fcfcb, type: 3}
+  m_PrefabInstance: {fileID: 3989919060375362431}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4476493023553786200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6875759931808952185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e78c56bc2b9104c9583619ee26e6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioNames:
+  - FS_1
+  - FS_2
+  - FS_3
+  - FS_4
+  - FS_5
+  - FS_6
+  - FS_7
+  - FS_8
+  - FS_9

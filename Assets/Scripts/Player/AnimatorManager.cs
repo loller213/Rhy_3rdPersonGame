@@ -5,11 +5,23 @@ using UnityEngine;
 public class AnimatorManager : MonoBehaviour
 {
 
+    private static AnimatorManager _instance;
+    public static AnimatorManager Instance => _instance;
+
     Animator animator;
     int horizontal, vertical;
 
     private void Awake()
     {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else if (_instance != this)
+        {
+            Destroy(gameObject);
+        }
+
         animator = GetComponent<Animator>();
         horizontal = Animator.StringToHash("Horizontal");
         vertical = Animator.StringToHash("Vertical");
@@ -87,6 +99,5 @@ public class AnimatorManager : MonoBehaviour
         animator.SetFloat(horizontal, snapHorizontal, 0.1f, Time.deltaTime);
         animator.SetFloat(vertical, snapvertical, 0.1f, Time.deltaTime);
     }
-
 
 }
