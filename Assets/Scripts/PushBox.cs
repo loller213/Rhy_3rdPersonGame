@@ -29,6 +29,8 @@ public class PushBox : MonoBehaviour
             Vector3 newPosition = Vector3.MoveTowards(rb.position, targetPosition, moveSpeed * Time.deltaTime);
             rb.MovePosition(newPosition);
 
+            AudioManager.Instance.SFXplay("HeavySlide");
+
             // Check if reached the target position
             if (Vector3.Distance(rb.position, targetPosition) < 0.01f)
             {
