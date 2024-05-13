@@ -761,6 +761,7 @@ GameObject:
   - component: {fileID: 316908857}
   - component: {fileID: 316908858}
   - component: {fileID: 316908859}
+  - component: {fileID: 316908860}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -812,6 +813,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmSlider: {fileID: 883962727}
   sfxSlider: {fileID: 560002519}
+--- !u!114 &316908860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316908856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3380dfa552069c044a12854bc99263c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modeButton: {fileID: 391293666}
+  starsGot: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  prefName:
+  - Level1_Stars
+  - Level2_Stars
+  - Level3_Stars
+  - Level4_Stars
+  - Level5_Stars
+  - Level6_Stars
+  - Level7_Stars
+  - Level8_Stars
+  - Level9_Stars
+  - Level10_Stars
+  - Level11_Stars
+  - Level12_Stars
+  - Level13_Stars
+  - Level14_Stars
+  - Level15_Stars
+  totalStars: 0
 --- !u!1 &329039198
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,7 +4532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.76862746}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.92156863}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
