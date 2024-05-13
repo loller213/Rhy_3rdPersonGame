@@ -36,7 +36,6 @@ public class PushBox : MonoBehaviour
             {
                 rb.MovePosition(targetPosition);
                 isMoving = false;
-                //gameObject.tag = "BOX";
             }
         }
     }
