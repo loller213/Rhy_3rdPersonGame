@@ -18,7 +18,6 @@ public class ModeUnlock : MonoBehaviour
 
     private void Start()
     {
-        //AddAllStars();
         CheckModeUnlock();
     }
 
