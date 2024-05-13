@@ -77,6 +77,7 @@ public class PointSystem : MonoBehaviour
                 TimerScript.Instance.CheckTimer();
                 winScreen.SetActive(true);
                 WinSystem_UIController.Instance.ActivateWinconditionScreen();
+                Time.timeScale = 0;
             }
         }
         else if (CurrentStageRequirement.Instance.getLevelRequirement() != pointsCovered)
