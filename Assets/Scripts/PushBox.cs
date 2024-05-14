@@ -14,10 +14,15 @@ public class PushBox : MonoBehaviour
     private Vector3 targetPosition;
     private bool isMoving = false;
 
+    [SerializeField] private Collider col;
+    [SerializeField] private Collider colChild;
+
     void Start()
     {
         //gameObject.tag = "BOX"; 
         rb = GetComponent<Rigidbody>();
+        col = GetComponent<Collider>();
+        //colChild = GetComponentInChildren<Collider>();
         targetPosition = transform.position;
     }
 
@@ -25,18 +30,21 @@ public class PushBox : MonoBehaviour
     {
         if (isMoving)
         {
+            AudioManager.Instance.SFXplay("HeavySlide");
+
             // Move towards the target position
+            colChild.enabled = false;
             Vector3 newPosition = Vector3.MoveTowards(rb.position, targetPosition, moveSpeed * Time.deltaTime);
             rb.MovePosition(newPosition);
-
-            AudioManager.Instance.SFXplay("HeavySlide");
 
             // Check if reached the target position
             if (Vector3.Distance(rb.position, targetPosition) < 0.01f)
             {
+                colChild.enabled = true;
                 rb.MovePosition(targetPosition);
                 isMoving = false;
             }
+
         }
     }
 

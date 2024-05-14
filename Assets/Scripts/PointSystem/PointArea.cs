@@ -16,14 +16,14 @@ public class PointArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("BOX"))
+        if (other.CompareTag("BoxPoint"))
         {
             EventManager.ON_AREA_ENTER?.Invoke();
             Debug.Log("(On add) Covered: " + PointSystem.Instance.GetPointsCovered());
         }
 
     }
-
+    
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("BOX"))
