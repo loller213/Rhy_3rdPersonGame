@@ -250,7 +250,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1244
+  m_VersionIndex: 1247
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -374,6 +374,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1455667957677449174}
     m_Modifications:
+    - target: {fileID: 2879460099336928855, guid: 9bdd53b97dde96f42838f0e692d25919, type: 3}
+      propertyPath: m_VersionIndex
+      value: 2428
+      objectReference: {fileID: 0}
     - target: {fileID: 7322221817838895982, guid: 9bdd53b97dde96f42838f0e692d25919, type: 3}
       propertyPath: m_Name
       value: Torus
@@ -388,7 +392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8277817395208004490, guid: 9bdd53b97dde96f42838f0e692d25919, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.044784784
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8277817395208004490, guid: 9bdd53b97dde96f42838f0e692d25919, type: 3}
       propertyPath: m_LocalRotation.w

@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum MaterialType{
+    Rock,
+    Metal,
+    Wood
+}
+
 [RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]
 public class PushBox : MonoBehaviour
 {
@@ -14,10 +20,17 @@ public class PushBox : MonoBehaviour
     private Vector3 targetPosition;
     private bool isMoving = false;
 
+    [SerializeField] private MaterialType typeOfMaterial;
+    
+    [SerializeField] private Collider col;
+    [SerializeField] private Collider colChild;
+
     void Start()
     {
         //gameObject.tag = "BOX"; 
         rb = GetComponent<Rigidbody>();
+        col = GetComponent<Collider>();
+        //colChild = GetComponentInChildren<Collider>();
         targetPosition = transform.position;
     }
 
@@ -26,16 +39,18 @@ public class PushBox : MonoBehaviour
         if (isMoving)
         {
             // Move towards the target position
+            colChild.enabled = false;
             Vector3 newPosition = Vector3.MoveTowards(rb.position, targetPosition, moveSpeed * Time.deltaTime);
             rb.MovePosition(newPosition);
 
             // Check if reached the target position
             if (Vector3.Distance(rb.position, targetPosition) < 0.01f)
             {
+                colChild.enabled = true;
                 rb.MovePosition(targetPosition);
                 isMoving = false;
-                //gameObject.tag = "BOX";
             }
+
         }
     }
 
@@ -43,6 +58,22 @@ public class PushBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            //Check for Type then play sfx accordingly
+            switch (typeOfMaterial)
+            {
+                case MaterialType.Rock:
+                    AudioManager.Instance.SFXplay("HeavySlide");
+                    break;
+
+                case MaterialType.Metal:
+                    AudioManager.Instance.SFXplay("");
+                    break;
+
+                case MaterialType.Wood:
+                    AudioManager.Instance.SFXplay("");
+                    break;
+            }
+
             // Calculate the direction of the push based on the relative position of the player to the box
             Vector3 playerRelativePosition = transform.InverseTransformPoint(collision.transform.position);
 
