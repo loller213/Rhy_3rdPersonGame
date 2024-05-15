@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum MaterialType{
+    Rock,
+    Metal,
+    Wood
+}
+
 [RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]
 public class PushBox : MonoBehaviour
 {
@@ -14,6 +20,8 @@ public class PushBox : MonoBehaviour
     private Vector3 targetPosition;
     private bool isMoving = false;
 
+    [SerializeField] private MaterialType typeOfMaterial;
+    
     [SerializeField] private Collider col;
     [SerializeField] private Collider colChild;
 
@@ -30,8 +38,6 @@ public class PushBox : MonoBehaviour
     {
         if (isMoving)
         {
-            AudioManager.Instance.SFXplay("HeavySlide");
-
             // Move towards the target position
             colChild.enabled = false;
             Vector3 newPosition = Vector3.MoveTowards(rb.position, targetPosition, moveSpeed * Time.deltaTime);
@@ -52,6 +58,22 @@ public class PushBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            //Check for Type then play sfx accordingly
+            switch (typeOfMaterial)
+            {
+                case MaterialType.Rock:
+                    AudioManager.Instance.SFXplay("HeavySlide");
+                    break;
+
+                case MaterialType.Metal:
+                    AudioManager.Instance.SFXplay("");
+                    break;
+
+                case MaterialType.Wood:
+                    AudioManager.Instance.SFXplay("");
+                    break;
+            }
+
             // Calculate the direction of the push based on the relative position of the player to the box
             Vector3 playerRelativePosition = transform.InverseTransformPoint(collision.transform.position);
 
