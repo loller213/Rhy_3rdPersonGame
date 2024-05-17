@@ -7,63 +7,20 @@ using TMPro;
 
 public class MapManager : MonoBehaviour
 {
-    /*public static MapManager Instance { get; private set; }
-
-    [SerializeField] private TextMeshProUGUI levelText;
-    public GameObject mapScreen;
-    public bool isShown;
-    
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private void Start()
-    {
-        levelText.text = SceneManager.GetActiveScene().name;
-    }
-
-    private void Update()
-    {
-        if (!Input.GetKeyDown(KeyCode.M)) return;
-        
-        if (PauseManager.Instance.isPaused)
-        {
-            PauseManager.Instance.pauseScreen.SetActive(false);
-            PauseManager.Instance.isPaused = false;
-        }
-        
-        switch (isShown)
-        {
-            case true when Input.GetKeyDown(KeyCode.M):
-                mapScreen.SetActive(false);
-                isShown = false;
-                break;
-            case false when Input.GetKeyDown(KeyCode.M):
-                mapScreen.SetActive(true);
-                isShown = true;
-                break;
-        }
-    }*/
-    
     public TextMeshProUGUI levelText;
     public Camera charCamera;
     public Camera mapCamera;
     public GameObject mapScreen;
     public bool isMapShown;
-    public float rotationSpeed = 1f;
-    public float zoomSpeed = 1f;
-    public float moveSpeed = 1f;
     private Vector3 defaultPosition;
     private Quaternion defaultRotation;
     private Vector3 defaultScale;
+    
+    private float zoomSpeed = 5f;
+    
+    private Vector2 xBounds = new Vector2(-6.28f, 10.2f);
+    private Vector2 zBounds = new Vector2(-11.6f, 16.2f);
+    private Vector2 yBounds = new Vector2(10.4f, 45.2f);
     
     private void Start()
     {
@@ -105,28 +62,25 @@ public class MapManager : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            var rotation = Input.GetAxis("Mouse X") * rotationSpeed;
-            mapCamera.transform.Rotate(0, 0, rotation);
-        }
-
-        if (!Input.GetMouseButton(2))
-        {
-            var zoom = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
-            mapCamera.transform.Translate(0, 0, zoom);
-        }
-        
-        if (Input.GetMouseButton(2))
-        {
-            var h = rotationSpeed * Input.GetAxis("Mouse X") * moveSpeed;
-            var v = rotationSpeed * Input.GetAxis("Mouse Y") * moveSpeed;
+            var h = Input.GetAxis("Mouse X");
+            var v = Input.GetAxis("Mouse Y");
             
             var move = new Vector3(h, v, 0);
-            
             move = mapCamera.transform.rotation * move;
             
-            mapCamera.transform.position -= move;
+            var newPosition = mapCamera.transform.position - move;
+            
+            newPosition.x = Mathf.Clamp(newPosition.x, xBounds.x, xBounds.y);
+            newPosition.z = Mathf.Clamp(newPosition.z, zBounds.x, zBounds.y);
+            
+            mapCamera.transform.position = newPosition;
+        }
+        else
+        {
+            var zoom = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
+            var newZoomPosition = mapCamera.transform.position + mapCamera.transform.forward * zoom;
+            newZoomPosition.y = Mathf.Clamp(newZoomPosition.y, yBounds.x, yBounds.y);
+            mapCamera.transform.position = newZoomPosition;
         }
     }
-    
-    
 }
