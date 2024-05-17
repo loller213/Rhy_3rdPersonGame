@@ -23,7 +23,7 @@ public class CharacterCustomization : MonoBehaviour
 
         hairstyle.transform.localPosition = Vector3.zero;
 
-        hairstyle.transform.localPosition = new Vector3(0f, -0.02f, 0f);
+        hairstyle.transform.localPosition = new Vector3(0f, -0.004f, 0f);
         hairstyle.transform.localRotation = Quaternion.Euler(270f, 0f, 0f);
 
         Debug.Log("Hairstyle applied");

@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &11119083 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3565430572311058456, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
+  m_PrefabInstance: {fileID: 1722818656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &100599544 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5382171904730008616, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
@@ -711,6 +716,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &500093077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4973373985594365135, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
+  m_PrefabInstance: {fileID: 1722818656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &565839188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5249,9 +5259,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 624560d2b71f32e42a514eb115040394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerModel: {fileID: 0}
-  hairstyleOption1: {fileID: 0}
-  head: {fileID: 0}
+  playerModel: {fileID: 500093077}
+  hairstyleOption1: {fileID: 6400369553937330312, guid: 9ddc920123b9c2f48bcc255d0afd8391, type: 3}
+  head: {fileID: 11119083}
   body: {fileID: 0}
   leftArm: {fileID: 0}
   rightArm: {fileID: 0}
