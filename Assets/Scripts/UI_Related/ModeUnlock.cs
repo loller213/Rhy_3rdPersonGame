@@ -9,12 +9,9 @@ public class ModeUnlock : MonoBehaviour
     [SerializeField] private int[] starsGot;
     [SerializeField] private string[] prefName;
     [SerializeField] private int totalStars;
-    private int starRequirement;
+    [SerializeField] private int starRequirement;
 
-    private void Awake()
-    {
-        starRequirement = 30;
-    }
+    [SerializeField] private GameObject sign;
 
     private void Start()
     {
@@ -26,10 +23,12 @@ public class ModeUnlock : MonoBehaviour
 
         if (AddAllStars() >= starRequirement)
         {
+            sign.SetActive(false);
             modeButton.interactable = true;
         }
         else
         {
+            sign.SetActive(true);
             modeButton.interactable = false;
         }
     }
