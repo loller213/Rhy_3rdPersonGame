@@ -55,7 +55,7 @@ public class CameraManager : MonoBehaviour
         FollowTarget();
         RotateCamera();
         HandleCameraCollisions();
-        MouseLockState();
+        //MouseLockState();
 
     }
 
@@ -109,18 +109,18 @@ public class CameraManager : MonoBehaviour
         cameraTransform.localPosition = cameraVectorPosition;
     }
 
-    private void MouseLockState()
-    {
+    //private void MouseLockState()
+    //{
 
-        if (Input.GetKeyDown(KeyCode.Escape) && Cursor.lockState == CursorLockMode.Confined)
-        {
-            UnlockMouse();
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && Cursor.lockState == CursorLockMode.None)
-        {
-            LockMouse();
-        }
-    }
+    //    if (Input.GetKeyDown(KeyCode.Escape) && Cursor.lockState == CursorLockMode.Confined)
+    //    {
+    //        UnlockMouse();
+    //    }
+    //    else if (Input.GetKeyDown(KeyCode.Escape) && Cursor.lockState == CursorLockMode.None)
+    //    {
+    //        LockMouse();
+    //    }
+    //}
 
     public void LockMouse()
     {
