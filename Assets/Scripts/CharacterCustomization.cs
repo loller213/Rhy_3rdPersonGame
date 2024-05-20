@@ -7,6 +7,7 @@ public class CharacterCustomization : MonoBehaviour
 {
     public GameObject playerModel;
     public GameObject hairstyleOption1;
+    public GameObject hairstyleOption2;
 
     public Transform head;
     public Transform body;
@@ -26,7 +27,21 @@ public class CharacterCustomization : MonoBehaviour
         hairstyle.transform.localPosition = new Vector3(0f, -0.004f, 0f);
         hairstyle.transform.localRotation = Quaternion.Euler(270f, 0f, 0f);
 
-        Debug.Log("Hairstyle applied");
+        Debug.Log("Helmet applied");
+    }
+
+    public void ApplyHairstyle2()
+    {
+        GameObject hairstyle = Instantiate(hairstyleOption2);
+
+        hairstyle.transform.parent = head;
+
+        hairstyle.transform.localPosition = Vector3.zero;
+
+        hairstyle.transform.localPosition = new Vector3(0f, -0.002f, 0.004f);
+        hairstyle.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+
+        Debug.Log("Mask applied");
     }
 
     public void RemoveAllWornItems()
