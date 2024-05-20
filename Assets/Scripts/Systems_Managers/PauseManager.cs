@@ -53,6 +53,7 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 0; 
         isPaused = true;
+        CameraManager.Instance.UnlockMouse();
         pauseScreen.SetActive(true);
     }
 
@@ -60,6 +61,7 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 1;
         isPaused = false;
+        CameraManager.Instance.LockMouse();
         pauseScreen.SetActive(false);
     }
 
@@ -68,8 +70,4 @@ public class PauseManager : MonoBehaviour
         return isPaused;
     }
 
-    public void StageCounter()
-    {
-
-    }
 }
