@@ -48,7 +48,6 @@ public class InputManager : MonoBehaviour
             playerControls.PlayerActions.Walk.canceled += i => walk_input = false;
 
             playerControls.PlayerActions.RestartLevel.performed += i => restartLevel_input = true;
-            //playerControls.PlayerActions.RestartLevel.canceled += i => walk_input = false;
         }
 
         playerControls.Enable();
