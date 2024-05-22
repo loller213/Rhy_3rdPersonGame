@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
 
 public class TotalStars : ModeUnlock
 {
-    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text currScore;
     [SerializeField] private TMP_Text totalScore;
-    [SerializeField] private int Levels = 15;
     [SerializeField] private int numStarPerLevel = 3;
+    private int Levels = 15;
 
     protected override void Start()
     {
@@ -18,10 +17,14 @@ public class TotalStars : ModeUnlock
 
     private void StarInitialization()
     {
+        // get data
         AddAllStars();
-        if (scoreText != null && totalScore !=null) 
+        Levels = PrefName.Length;
+
+        // show data
+        if (currScore != null && totalScore !=null) 
         {
-            scoreText.text = TotalStars.ToString("D2");
+            currScore.text = TotalStars.ToString("D2");
             var totalStarPerLevel = Levels * numStarPerLevel;
             totalScore.text = totalStarPerLevel.ToString("D2");
         }

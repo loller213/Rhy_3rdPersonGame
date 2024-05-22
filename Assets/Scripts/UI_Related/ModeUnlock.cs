@@ -14,6 +14,7 @@ public class ModeUnlock : MonoBehaviour
     [SerializeField] private GameObject sign;
 
     public int TotalStars{ get => totalStars; private set => totalStars = value;}
+    public string[] PrefName { get => prefName; private set => prefName = value; }
 
     protected virtual void Start()
     {
