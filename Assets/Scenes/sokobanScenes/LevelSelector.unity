@@ -4723,7 +4723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modeButton: {fileID: 0}
-  starsGot: 030000000300000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  starsGot: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   prefName:
   - Level1_Stars
   - Level2_Stars
@@ -4743,9 +4743,8 @@ MonoBehaviour:
   totalStars: 0
   starRequirement: 0
   sign: {fileID: 0}
-  scoreText: {fileID: 463455405}
+  currScore: {fileID: 0}
   totalScore: {fileID: 1490948096}
-  Levels: 15
   numStarPerLevel: 3
 --- !u!1 &724822159
 GameObject:
