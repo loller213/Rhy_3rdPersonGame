@@ -23,6 +23,7 @@ public class InputManager : MonoBehaviour
 
     public bool sprint_input;
     public bool walk_input;
+    public bool restartLevel_input;
 
     private void Awake()
     {
@@ -45,6 +46,8 @@ public class InputManager : MonoBehaviour
 
             playerControls.PlayerActions.Walk.performed += i => walk_input = true;
             playerControls.PlayerActions.Walk.canceled += i => walk_input = false;
+
+            playerControls.PlayerActions.RestartLevel.performed += i => restartLevel_input = true;
         }
 
         playerControls.Enable();
@@ -63,6 +66,7 @@ public class InputManager : MonoBehaviour
         HandleMovementInput();
         HandleSprint();
         HandleWalk();
+        HandleRestartLevelInput();
     }
 
     
@@ -73,7 +77,6 @@ public class InputManager : MonoBehaviour
 
         cameraInputX = cameraInput.x;
         cameraInputY = cameraInput.y;
-
 
         moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
         animatorManager.UpdateAnimatorValues(0, moveAmount, playerLocomotion.isSprinting, playerLocomotion.isWalking);
@@ -101,6 +104,15 @@ public class InputManager : MonoBehaviour
         else
         {
             playerLocomotion.isSprinting = false;
+        }
+    }
+
+    private void HandleRestartLevelInput()
+    {
+        if (restartLevel_input)
+        {
+            restartLevel_input = false;
+            SceneManagerScript.Instance.RestartScene();
         }
     }
 
