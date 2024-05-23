@@ -18,11 +18,10 @@ public class TotalStars : ModeUnlock
     private void StarInitialization()
     {
         // get data
-        AddAllStars();
         Levels = PrefName.Length;
 
         // show data
-        if (currScore != null && totalScore !=null) 
+        if (AddAllStars() > 0) 
         {
             currScore.text = TotalStars.ToString("D2");
             var totalStarPerLevel = Levels * numStarPerLevel;
