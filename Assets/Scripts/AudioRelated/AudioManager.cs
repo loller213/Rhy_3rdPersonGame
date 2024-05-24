@@ -46,6 +46,11 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    public void BGMstop()
+    {
+        bgmSrc.Stop();
+    }
+
     public void SFXplay(string name)
     {
         Sound sfxSound = Array.Find(sfx, x => x.audioName == name);

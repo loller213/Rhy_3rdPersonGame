@@ -21,6 +21,9 @@ public class MapManager : MonoBehaviour
     private Vector2 xBounds = new Vector2(-6.28f, 10.2f);
     private Vector2 zBounds = new Vector2(-11.6f, 16.2f);
     private Vector2 yBounds = new Vector2(10.4f, 45.2f);
+
+    public GameObject location;
+    public GameObject player;
     
     private void Start()
     {
@@ -29,7 +32,7 @@ public class MapManager : MonoBehaviour
         mapCamera.enabled = false;
         mapScreen.SetActive(false);
         isMapShown = false;
-        
+        setIndicatorPosition();
         defaultPosition = mapCamera.transform.position;
         defaultRotation = mapCamera.transform.rotation;
         defaultScale = mapCamera.transform.localScale;
@@ -43,6 +46,8 @@ public class MapManager : MonoBehaviour
             mapCamera.enabled = !mapCamera.enabled;
             mapScreen.SetActive(mapCamera.enabled);
             isMapShown = mapCamera.enabled;
+            setIndicatorPosition();
+            location.SetActive(isMapShown);
         }
 
         if (isMapShown)
@@ -56,6 +61,11 @@ public class MapManager : MonoBehaviour
             mapCamera.transform.rotation = defaultRotation;
             mapCamera.transform.localScale = defaultScale;
         }
+    }
+    
+    private void setIndicatorPosition()
+    {
+        location.transform.position = new Vector3(player.transform.position.x, location.transform.position.y, player.transform.position.z);
     }
 
     private void HandleMouseInput()
