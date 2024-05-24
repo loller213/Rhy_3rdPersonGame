@@ -40,6 +40,10 @@ public class SceneManagerScript : MonoBehaviour
         //Open Loading Screen
         LoadingScreen.SetActive(true);
 
+        if (LevelAudio.Instance != null)
+            LevelAudio.Instance.GetSceneAudio();
+        else { Debug.Log("No Level audio found"); }
+
         //Start loading bar
         while (!operation.isDone)
         {
@@ -52,7 +56,6 @@ public class SceneManagerScript : MonoBehaviour
         }
 
     }
-
 
     public void QuitGameMainMenu()
     {

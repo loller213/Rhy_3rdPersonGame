@@ -833,9 +833,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
       propertyPath: bgm.Array.data[0].clip
       value: 
+      objectReference: {fileID: 8300000, guid: 9eeebe8e38e86324280284890b09bb2b, type: 3}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.data[1].clip
+      value: 
       objectReference: {fileID: 8300000, guid: 84c41f9e4bbdc994faa62773470df90f, type: 3}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.data[1].audioName
+      value: Theme_1
+      objectReference: {fileID: 0}
     - target: {fileID: 4339535390386525658, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
       propertyPath: m_Name
       value: AudioManager
