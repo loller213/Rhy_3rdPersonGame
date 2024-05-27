@@ -177,12 +177,10 @@ MonoBehaviour:
   bgm:
   - audioName: Theme_1
     clip: {fileID: 8300000, guid: 9eeebe8e38e86324280284890b09bb2b, type: 3}
-  - audioName: Easy_BGM
-    clip: {fileID: 8300000, guid: 63811a0ee848e5d43948c9ef54051b23, type: 3}
-  - audioName: Medium_BGM
-    clip: {fileID: 8300000, guid: 730b2d5a47cbdd744870a85b5d1d76c4, type: 3}
-  - audioName: Hard_BGM
-    clip: {fileID: 8300000, guid: ae13c3b7cb012c44c85b20b51a394cde, type: 3}
+  - audioName: Easy
+    clip: {fileID: 8300000, guid: 3d6ef0cbb9dfb384790e3a436827ad21, type: 3}
+  - audioName: Medium
+    clip: {fileID: 8300000, guid: cbe4bc002e866d74696f4185e454cd9e, type: 3}
   sfx:
   - audioName: HeavySlide
     clip: {fileID: 8300000, guid: 346312202367d9f4791836772e4d26d6, type: 3}
