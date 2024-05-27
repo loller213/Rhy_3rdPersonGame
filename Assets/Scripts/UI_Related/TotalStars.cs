@@ -12,6 +12,10 @@ public class TotalStars : ModeUnlock
 
     protected override void Start()
     {
+        if(currScore ==  null || totalScore == null)
+        {
+            Debug.LogError("Text UI not found");
+        }
         StarInitialization();
     }
 
