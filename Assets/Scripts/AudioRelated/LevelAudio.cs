@@ -6,15 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class LevelAudio : MonoBehaviour
 {
+    public static LevelAudio Instance;
     [SerializeField] private AudioManager AudioManager;
 
+    private void Awake()
+    {
+        if(Instance == null)
+            Instance = this;
+        else
+            Destroy(this);
+    }
+
     private void Start()
+    {
+        LoadAudio();
+    }
+
+    public void LoadAudio()
     {
         AudioManager.BGMstop();
         GetSceneAudio();
     }
 
-    public void GetSceneAudio()
+    private void GetSceneAudio()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
 
