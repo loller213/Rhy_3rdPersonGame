@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class LevelAudio : MonoBehaviour
 {
     public static LevelAudio Instance;
-    [SerializeField] private AudioManager AudioManager;
 
     private void Awake()
     {
@@ -19,12 +18,7 @@ public class LevelAudio : MonoBehaviour
 
     private void Start()
     {
-        LoadAudio();
-    }
-
-    public void LoadAudio()
-    {
-        AudioManager.BGMstop();
+        AudioManager.Instance.BGMstop();
         GetSceneAudio();
     }
 
@@ -35,12 +29,12 @@ public class LevelAudio : MonoBehaviour
         if (currentLevelIndex <= 7 && currentLevelIndex >= 3)
         {
             Debug.Log("Level Scene: " + currentLevelIndex + " Easy BGM");
-            AudioManager.BGMplay("Easy");
+            AudioManager.Instance.BGMplay("Easy");
         }
         else if (currentLevelIndex <= 12 && currentLevelIndex >= 8)
         {
             Debug.Log("Level Scene: " + currentLevelIndex + " Medium BGM");
-            AudioManager.BGMplay("Medium");
+            AudioManager.Instance.BGMplay("Medium");
         }
         /*
         else if (currentLevelIndex >= 17 && currentLevelIndex >= 13)
@@ -49,7 +43,8 @@ public class LevelAudio : MonoBehaviour
         }*/
         else
         {
-            AudioManager.BGMplay("Theme_1");
+            Debug.Log("Level Scene: " + currentLevelIndex + " Theme 1");
+            AudioManager.Instance.BGMplay("Theme_1");
         }
     }
 }
