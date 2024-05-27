@@ -41,6 +41,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             bgmSrc.clip = bgmSound.clip;
+            Debug.Log("Playing: " + name);
             bgmSrc.Play();
         }
 
