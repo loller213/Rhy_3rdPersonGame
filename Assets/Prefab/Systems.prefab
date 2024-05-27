@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 8894868283266981479}
   - component: {fileID: 3686945925693536620}
   - component: {fileID: 1752248138176081063}
+  - component: {fileID: 1889745802498866520}
   m_Layer: 0
   m_Name: Systems
   m_TagString: Untagged
@@ -197,5 +198,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelText: {fileID: 0}
+  charCamera: {fileID: 0}
+  mapCamera: {fileID: 0}
   mapScreen: {fileID: 0}
-  isShown: 0
+  isMapShown: 0
+  location: {fileID: 0}
+  player: {fileID: 0}
+--- !u!114 &1889745802498866520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2346230049666575654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624560d2b71f32e42a514eb115040394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerModel: {fileID: 0}
+  hairstyleOption1: {fileID: 6400369553937330312, guid: 9ddc920123b9c2f48bcc255d0afd8391, type: 3}
+  hairstyleOption2: {fileID: 2999992601843778638, guid: a8fe06ee986950c45ac69bbb3f20597d, type: 3}
+  ToolOption1: {fileID: 8822092812136773138, guid: 3057634bfae1e3548b9a3bab9b65d8f9, type: 3}
+  head: {fileID: 0}
+  body: {fileID: 0}
+  leftArm: {fileID: 0}
+  rightArm: {fileID: 0}
+  leftLeg: {fileID: 0}
+  rightLeg: {fileID: 0}
