@@ -27,7 +27,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        BGMplay("Theme_1");
+        //BGMplay("Theme_1");
     }
 
     public void BGMplay(string name)
@@ -41,6 +41,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             bgmSrc.clip = bgmSound.clip;
+            Debug.Log("Playing: " + name);
             bgmSrc.Play();
         }
 
@@ -49,6 +50,7 @@ public class AudioManager : MonoBehaviour
     public void BGMstop()
     {
         bgmSrc.Stop();
+        bgmSrc.clip = null;
     }
 
     public void SFXplay(string name)

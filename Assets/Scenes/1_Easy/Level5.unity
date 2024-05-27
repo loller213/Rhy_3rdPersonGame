@@ -515,6 +515,10 @@ PrefabInstance:
       propertyPath: endTimerUI
       value: 
       objectReference: {fileID: 984430973}
+    - target: {fileID: 4041912361485936623, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: AudioManager
+      value: 
+      objectReference: {fileID: 1554022949}
     - target: {fileID: 4413273271487287860, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: winScreen
       value: 
@@ -4475,6 +4479,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+--- !u!114 &1554022949 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+  m_PrefabInstance: {fileID: 1554022948}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5872e974c6c96cc4faa1e4f3ca1d0a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1613486933
 GameObject:
   m_ObjectHideFlags: 0
