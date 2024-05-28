@@ -100,6 +100,11 @@ public class PlayerLocomotion : MonoBehaviour
         Vector3 movementVelocity = moveDirection;
         playerRB.velocity = movementVelocity;
 
+        if (MapManager.Instance.isMapShown)
+        {
+            playerRB.velocity = Vector3.zero;
+        }
+
     }
 
     private void HandleRotation()

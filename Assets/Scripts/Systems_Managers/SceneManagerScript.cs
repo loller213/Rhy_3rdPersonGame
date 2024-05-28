@@ -24,6 +24,7 @@ public class SceneManagerScript : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         StartCoroutine(LoadSceneAsync(sceneName));
+        PauseManager.Instance.GameUnpaused();
     }
 
     public void RestartScene()
@@ -36,6 +37,7 @@ public class SceneManagerScript : MonoBehaviour
     IEnumerator LoadSceneAsync(string sceneName)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        Time.timeScale = 1;
 
         //Open Loading Screen
         LoadingScreen.SetActive(true);

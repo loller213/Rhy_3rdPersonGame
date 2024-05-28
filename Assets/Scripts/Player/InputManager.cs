@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    private static InputManager _instance;
+    public static InputManager Instance => _instance;
 
     PlayerControls playerControls;
     PlayerLocomotion playerLocomotion;
@@ -27,6 +29,15 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else if (_instance != this)
+        {
+            Destroy(gameObject);
+        }
+
         animatorManager = GetComponent<AnimatorManager>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
         mapManager = FindObjectOfType<MapManager>();
@@ -61,7 +72,11 @@ public class InputManager : MonoBehaviour
 
     public void HandleAllInput()
     {
-        if (mapManager.isMapShown) return;
+        if (mapManager.isMapShown)
+        {
+            AnimatorManager.Instance.ResetAnimValues();
+            return;
+        }
         
         HandleMovementInput();
         HandleSprint();
@@ -81,6 +96,23 @@ public class InputManager : MonoBehaviour
         moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
         animatorManager.UpdateAnimatorValues(0, moveAmount, playerLocomotion.isSprinting, playerLocomotion.isWalking);
 
+    }
+
+    public void ResetMoveValues()
+    {
+        verticalInput = 0;
+        horizontalInput = 0;
+        moveAmount = 0;
+    }
+
+    public void EnableRestartSystem()
+    {
+        playerControls.PlayerActions.RestartLevel.Enable();
+    }
+
+    public void DisableRestartSystem()
+    {
+        playerControls.PlayerActions.RestartLevel.Disable();
     }
 
     private void HandleWalk()
@@ -111,8 +143,15 @@ public class InputManager : MonoBehaviour
     {
         if (restartLevel_input)
         {
-            restartLevel_input = false;
-            SceneManagerScript.Instance.RestartScene();
+            if (!MapManager.Instance.GetMapState())
+            {
+                restartLevel_input = false;
+                SceneManagerScript.Instance.RestartScene();
+            }
+            else if (MapManager.Instance.GetMapState())
+            {
+                restartLevel_input = false;
+            }
         }
     }
 
