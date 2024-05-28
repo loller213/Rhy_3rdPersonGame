@@ -24,7 +24,22 @@ public class MapManager : MonoBehaviour
 
     public GameObject location;
     public GameObject player;
-    
+
+    private static MapManager _instance;
+    public static MapManager Instance => _instance;
+
+    private void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else if (_instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         levelText.text = SceneManager.GetActiveScene().name;
@@ -48,6 +63,18 @@ public class MapManager : MonoBehaviour
             isMapShown = mapCamera.enabled;
             setIndicatorPosition();
             location.SetActive(isMapShown);
+
+            if (isMapShown)
+            {
+                InputManager.Instance.DisableRestartSystem();
+                InputManager.Instance.ResetMoveValues();
+            }
+            else
+            {
+                InputManager.Instance.EnableRestartSystem();   
+            }
+
+
         }
 
         if (isMapShown)
@@ -55,7 +82,7 @@ public class MapManager : MonoBehaviour
             HandleMouseInput();
         }
 
-        if (!isMapShown || Input.GetKeyDown(KeyCode.R))
+        if (isMapShown && Input.GetKeyDown(KeyCode.R))
         {
             mapCamera.transform.position = defaultPosition;
             mapCamera.transform.rotation = defaultRotation;
@@ -93,4 +120,10 @@ public class MapManager : MonoBehaviour
             mapCamera.transform.position = newZoomPosition;
         }
     }
+
+    public bool GetMapState()
+    {
+        return isMapShown;
+    }
+
 }
