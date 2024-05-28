@@ -60,17 +60,20 @@ public class TimerScript : MonoBehaviour
             //MinimumStars
             Debug.Log("Level get 1 star");
             StarsSystem.Instance.StarAssignment(1);
+            PlayerPrefs.Save();
         }else if (timer >= 300 && timer <= 600)
         {
             //2 Stars
             Debug.Log("Level get 2 stars");
             StarsSystem.Instance.StarAssignment(2);
+            PlayerPrefs.Save();
         }
         else if (timer <= 300)
         {
             //Maximum Stars
             Debug.Log("Level get 3 stars");
             StarsSystem.Instance.StarAssignment(3);
+            PlayerPrefs.Save();
         }
     }
 
