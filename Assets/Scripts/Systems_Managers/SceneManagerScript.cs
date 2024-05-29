@@ -51,7 +51,7 @@ public class SceneManagerScript : MonoBehaviour
     IEnumerator LoadSceneAsync(string sceneName)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
-        Time.timeScale = 1;
+        PlayerPrefs.Save();
 
         //Open Loading Screen
         LoadingScreen.SetActive(true);
