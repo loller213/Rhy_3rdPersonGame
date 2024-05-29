@@ -593,6 +593,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318d59da6d0bc6742949e2184c56039f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &80276809 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1889745802498866520, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+  m_PrefabInstance: {fileID: 80276805}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624560d2b71f32e42a514eb115040394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &99807794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1184,7 +1195,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 80276809}
         m_TargetAssemblyTypeName: CharacterCustomization, Assembly-CSharp
         m_MethodName: RemoveCurrentWornItems
         m_Mode: 1
@@ -2036,7 +2047,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 80276809}
         m_TargetAssemblyTypeName: CharacterCustomization, Assembly-CSharp
         m_MethodName: ApplyHairstyle2
         m_Mode: 1
@@ -3872,7 +3883,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 80276809}
         m_TargetAssemblyTypeName: CharacterCustomization, Assembly-CSharp
         m_MethodName: ApplyHairstyle1
         m_Mode: 1
@@ -4981,7 +4992,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 80276809}
         m_TargetAssemblyTypeName: CharacterCustomization, Assembly-CSharp
         m_MethodName: ApplyTools1
         m_Mode: 1
@@ -5535,6 +5546,10 @@ PrefabInstance:
     - target: {fileID: 775353201286166981, guid: 6f8c2225f96b74049ae97b8bb6cde116, type: 3}
       propertyPath: m_Name
       value: LevelCounterSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320638994061826101, guid: 6f8c2225f96b74049ae97b8bb6cde116, type: 3}
+      propertyPath: playerLevel
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3954259482779996042, guid: 6f8c2225f96b74049ae97b8bb6cde116, type: 3}
       propertyPath: m_LocalPosition.x
