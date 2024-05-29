@@ -24,7 +24,14 @@ public class SceneManagerScript : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         StartCoroutine(LoadSceneAsync(sceneName));
-        PauseManager.Instance.GameUnpaused();
+        //PauseManager.Instance.GameUnpaused();
+
+        if (SceneManagerScript.Instance.GetCurrentSceneName() == "LevelSelector")
+        {
+            MouseLockManager.Instance.UnlockMouse();
+        }
+;
+        PlayerPrefs.Save();
     }
 
     public void RestartScene()
@@ -32,6 +39,13 @@ public class SceneManagerScript : MonoBehaviour
         scene = SceneManager.GetActiveScene();
         string sceneName = scene.name;
         StartCoroutine(LoadSceneAsync(sceneName));
+    }
+
+    public string GetCurrentSceneName()
+    {
+        scene = SceneManager.GetActiveScene();
+        string sceneName = scene.name;
+        return sceneName;
     }
 
     IEnumerator LoadSceneAsync(string sceneName)

@@ -31,21 +31,28 @@ public class PauseManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (SceneManagerScript.Instance.GetCurrentSceneName() != "LevelSelector")
         {
-            if (!isPaused && !PointSystem.Instance.levelState())
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                GamePaused();
-                
-                // if (!MapManager.Instance.mapScreen.activeSelf) return;
-                //
-                // MapManager.Instance.mapScreen.SetActive(false);
-                // MapManager.Instance.isShown = false;
+                if (!isPaused && !PointSystem.Instance.levelState())
+                {
+                    GamePaused();
+
+                    // if (!MapManager.Instance.mapScreen.activeSelf) return;
+                    //
+                    // MapManager.Instance.mapScreen.SetActive(false);
+                    // MapManager.Instance.isShown = false;
+                }
+                else if (isPaused && !PointSystem.Instance.levelState())
+                {
+                    GameUnpaused();
+                }
             }
-            else if (isPaused && !PointSystem.Instance.levelState())
-            {
-                GameUnpaused();
-            }
+        }
+        else
+        {
+            return;
         }
     }
 
@@ -53,7 +60,7 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 0; 
         isPaused = true;
-        CameraManager.Instance.UnlockMouse();
+        MouseLockManager.Instance.UnlockMouse();
         pauseScreen.SetActive(true);
     }
 
@@ -61,7 +68,7 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 1;
         isPaused = false;
-        CameraManager.Instance.LockMouse();
+        MouseLockManager.Instance.LockMouse();
         pauseScreen.SetActive(false);
     }
 

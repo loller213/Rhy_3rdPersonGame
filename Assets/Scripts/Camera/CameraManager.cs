@@ -122,16 +122,4 @@ public class CameraManager : MonoBehaviour
     //    }
     //}
 
-    public void LockMouse()
-    {
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = false;
-    }
-
-    public void UnlockMouse()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
-
 }
