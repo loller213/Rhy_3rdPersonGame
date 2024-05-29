@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 072f0c10233cf6b439a42cb513428a9b, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 4da5f8a615e7e2f43b59cf6adeda32f7, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2745,7 +2745,7 @@ PrefabInstance:
     - target: {fileID: 684508869700990894, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8894868283266981479, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      objectReference: {fileID: 1284817243}
     - target: {fileID: 684508869700990894, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadScene
