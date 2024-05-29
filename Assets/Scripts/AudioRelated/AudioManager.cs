@@ -27,7 +27,10 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        //BGMplay("Theme_1");
+        if (SceneManagerScript.Instance.GetCurrentSceneName() == "StartMenu")
+        {
+            BGMplay("Theme_1");
+        }
     }
 
     public void BGMplay(string name)

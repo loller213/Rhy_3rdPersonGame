@@ -26,12 +26,11 @@ public class SceneManagerScript : MonoBehaviour
         StartCoroutine(LoadSceneAsync(sceneName));
         //PauseManager.Instance.GameUnpaused();
 
-        if (SceneManagerScript.Instance.GetCurrentSceneName() == "LevelSelector")
+        if (GetCurrentSceneName() == "LevelSelector")
         {
             MouseLockManager.Instance.UnlockMouse();
         }
-;
-        PlayerPrefs.Save();
+
     }
 
     public void RestartScene()
