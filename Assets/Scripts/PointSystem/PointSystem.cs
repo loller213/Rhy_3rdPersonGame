@@ -77,7 +77,7 @@ public class PointSystem : MonoBehaviour
                 TimerScript.Instance.CheckTimer();
                 winScreen.SetActive(true);
                 WinSystem_UIController.Instance.ActivateWinconditionScreen();
-                CameraManager.Instance.UnlockMouse();
+                MouseLockManager.Instance.UnlockMouse();
                 Time.timeScale = 0;
 
             }
