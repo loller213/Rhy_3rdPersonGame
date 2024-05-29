@@ -9,6 +9,7 @@ public class PauseManager : MonoBehaviour
     public static PauseManager Instance => _instance;
 
     public GameObject pauseScreen;
+    public GameObject inventoryScreen;
     public bool isPaused;
 
     private void Awake()
@@ -70,6 +71,7 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
         MouseLockManager.Instance.LockMouse();
         pauseScreen.SetActive(false);
+        inventoryScreen.SetActive(false);   
     }
 
     public bool PausedState()
