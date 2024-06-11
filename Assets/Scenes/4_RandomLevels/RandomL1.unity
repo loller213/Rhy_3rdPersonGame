@@ -4614,6 +4614,10 @@ PrefabInstance:
       propertyPath: pauseScreen
       value: 
       objectReference: {fileID: 1325537387}
+    - target: {fileID: 1251626599104446123, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: inventoryScreen
+      value: 
+      objectReference: {fileID: 1769139266}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: levelText
       value: 
@@ -8005,6 +8009,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1769139266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8620275005421828796, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 1325537375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1840846470
 Mesh:
   m_ObjectHideFlags: 0
