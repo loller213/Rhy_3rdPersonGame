@@ -107,9 +107,6 @@ public class LevelAudio : MonoBehaviour
                 case 36:
                     AudioManager.Instance.BGMplay("RL19");
                     break;
-                case 37:
-                    AudioManager.Instance.BGMplay("RL20");
-                    break;
                 default:
                     Debug.Log("Can't Find Level Audio for Random");
                     break;

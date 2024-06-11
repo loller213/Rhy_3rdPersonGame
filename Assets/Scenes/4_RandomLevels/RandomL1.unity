@@ -5953,6 +5953,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.size
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b94096266154ef40be67aa94e816522, type: 3}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.data[14].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 18fcb254a760f544eb9319f14f65a6aa, type: 3}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.data[20].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3f12f40c6e697b2409f8229fb6a5771f, type: 3}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.data[21].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 216ea2c7ee6881d40a8b3a8224ca7550, type: 3}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.data[22].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e8e7e842c8a9c5d4a865aa8a3e4a9a5d, type: 3}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.data[23].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9eeebe8e38e86324280284890b09bb2b, type: 3}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.data[20].audioName
+      value: RL17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.data[21].audioName
+      value: RL18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.data[22].audioName
+      value: RL19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776267504124075738, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
+      propertyPath: bgm.Array.data[23].audioName
+      value: RL17
+      objectReference: {fileID: 0}
     - target: {fileID: 4339535390386525658, guid: ee53b70fbc2ec8846bdd15df85e2231c, type: 3}
       propertyPath: m_Name
       value: AudioManager
