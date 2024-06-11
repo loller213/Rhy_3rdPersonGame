@@ -10766,6 +10766,26 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 6007470513060356239, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
   m_PrefabInstance: {fileID: 1215344249}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1215344251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1853038545221014519, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
+  m_PrefabInstance: {fileID: 1215344249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1215344252 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3565430572311058456, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
+  m_PrefabInstance: {fileID: 1215344249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1215344253 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2567074264240621014, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
+  m_PrefabInstance: {fileID: 1215344249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1215344254 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8802909137623110037, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
+  m_PrefabInstance: {fileID: 1215344249}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1240854089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8277817395208004490, guid: 9bdd53b97dde96f42838f0e692d25919, type: 3}
@@ -18174,6 +18194,22 @@ PrefabInstance:
       propertyPath: charCamera
       value: 
       objectReference: {fileID: 1215344250}
+    - target: {fileID: 1889745802498866520, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: head
+      value: 
+      objectReference: {fileID: 1215344252}
+    - target: {fileID: 1889745802498866520, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: leftArm
+      value: 
+      objectReference: {fileID: 1215344253}
+    - target: {fileID: 1889745802498866520, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: rightArm
+      value: 
+      objectReference: {fileID: 1215344254}
+    - target: {fileID: 1889745802498866520, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: playerModel
+      value: 
+      objectReference: {fileID: 1215344251}
     - target: {fileID: 2346230049666575654, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: m_Name
       value: Systems
