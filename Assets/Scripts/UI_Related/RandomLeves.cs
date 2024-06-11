@@ -8,7 +8,7 @@ public class RandomLeves : MonoBehaviour
     public int levelGen;
     public void LoadRandom()
     {
-        levelGen = Random.Range(17, 37);
+        levelGen = Random.Range(17, 36);
         SceneManager.LoadScene(levelGen);
     }
 }
