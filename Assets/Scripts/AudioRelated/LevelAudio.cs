@@ -6,43 +6,45 @@ using UnityEngine.SceneManagement;
 
 public class LevelAudio : MonoBehaviour
 {
-    public static LevelAudio Instance;   
-    [SerializeField] private AudioManager AudioManager;
+    public static LevelAudio Instance;
 
     private void Awake()
     {
-        if(Instance == null){Instance = this;}
-        else { Destroy(this);}
-
-        if (AudioManager == null)
-            AudioManager = AudioManager.Instance;
-    }
-   
-    private void PlayBGMPerScene(string audioName)
-    {
-        AudioManager.BGMplay(audioName);
+        if(Instance == null)
+            Instance = this;
+        else
+            Destroy(this);
     }
 
-    public void GetSceneAudio()
+    private void Start()
     {
-        AudioManager.BGMstop();
+        AudioManager.Instance.BGMstop();
+        GetSceneAudio();
+    }
+
+    private void GetSceneAudio()
+    {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log("Level Scene: " + currentLevelIndex);
+
         if (currentLevelIndex <= 7 && currentLevelIndex >= 3)
         {
-            PlayBGMPerScene("Easy_BGM");
+            Debug.Log("Level Scene: " + currentLevelIndex + " Easy BGM");
+            AudioManager.Instance.BGMplay("Easy");
         }
         else if (currentLevelIndex <= 12 && currentLevelIndex >= 8)
         {
-            PlayBGMPerScene("Medium_BGM");
+            Debug.Log("Level Scene: " + currentLevelIndex + " Medium BGM");
+            AudioManager.Instance.BGMplay("Medium");
         }
         else if (currentLevelIndex >= 17 && currentLevelIndex >= 13)
         {
-            PlayBGMPerScene("Hard_BGM");
+            AudioManager.Instance.BGMplay("Hard");
+            Debug.Log("Level Scene: " + currentLevelIndex + " Hard BGM");
         }
         else
         {
-            PlayBGMPerScene("Theme_1");
+            Debug.Log("Level Scene: " + currentLevelIndex + " Theme 1");
+            AudioManager.Instance.BGMplay("Theme_1");
         }
     }
 }

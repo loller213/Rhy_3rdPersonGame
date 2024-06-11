@@ -24,6 +24,13 @@ public class SceneManagerScript : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         StartCoroutine(LoadSceneAsync(sceneName));
+        //PauseManager.Instance.GameUnpaused();
+
+        if (GetCurrentSceneName() == "LevelSelector")
+        {
+            MouseLockManager.Instance.UnlockMouse();
+        }
+
     }
 
     public void RestartScene()
@@ -33,16 +40,20 @@ public class SceneManagerScript : MonoBehaviour
         StartCoroutine(LoadSceneAsync(sceneName));
     }
 
+    public string GetCurrentSceneName()
+    {
+        scene = SceneManager.GetActiveScene();
+        string sceneName = scene.name;
+        return sceneName;
+    }
+
     IEnumerator LoadSceneAsync(string sceneName)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        PlayerPrefs.Save();
 
         //Open Loading Screen
         LoadingScreen.SetActive(true);
-
-        if (LevelAudio.Instance != null)
-            LevelAudio.Instance.GetSceneAudio();
-        else { Debug.Log("No Level audio found"); }
 
         //Start loading bar
         while (!operation.isDone)
