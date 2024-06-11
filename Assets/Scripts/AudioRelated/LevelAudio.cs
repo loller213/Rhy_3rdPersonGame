@@ -26,7 +26,12 @@ public class LevelAudio : MonoBehaviour
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
 
-        if (currentLevelIndex <= 7 && currentLevelIndex >= 3)
+        if (currentLevelIndex <= 2 && currentLevelIndex >= 0)
+        {
+            Debug.Log("Level Scene: " + currentLevelIndex + " Theme 1");
+            AudioManager.Instance.BGMplay("Theme_1");
+        }
+        else if (currentLevelIndex <= 7 && currentLevelIndex >= 3)
         {
             Debug.Log("Level Scene: " + currentLevelIndex + " Easy BGM");
             AudioManager.Instance.BGMplay("Easy");
@@ -43,8 +48,72 @@ public class LevelAudio : MonoBehaviour
         }
         else
         {
-            Debug.Log("Level Scene: " + currentLevelIndex + " Theme 1");
-            AudioManager.Instance.BGMplay("Theme_1");
+            switch (currentLevelIndex)
+            {
+                case 18:
+                    AudioManager.Instance.BGMplay("RL1");
+                    break;
+                case 19:
+                    AudioManager.Instance.BGMplay("RL2");
+                    break;
+                case 20:
+                    AudioManager.Instance.BGMplay("RL3");
+                    break;
+                case 21:
+                    AudioManager.Instance.BGMplay("RL4");
+                    break;
+                case 22:
+                    AudioManager.Instance.BGMplay("RL5");
+                    break;
+                case 23:
+                    AudioManager.Instance.BGMplay("RL6");
+                    break;
+                case 24:
+                    AudioManager.Instance.BGMplay("RL7");
+                    break;
+                case 25:
+                    AudioManager.Instance.BGMplay("RL8");
+                    break;
+                case 26:
+                    AudioManager.Instance.BGMplay("RL9");
+                    break;
+                case 27:
+                    AudioManager.Instance.BGMplay("RL10");
+                    break;
+                case 28:
+                    AudioManager.Instance.BGMplay("RL11");
+                    break;
+                case 29:
+                    AudioManager.Instance.BGMplay("RL12");
+                    break;
+                case 30:
+                    AudioManager.Instance.BGMplay("RL13");
+                    break;
+                case 31:
+                    AudioManager.Instance.BGMplay("RL14");
+                    break;
+                case 32:
+                    AudioManager.Instance.BGMplay("RL15");
+                    break;
+                case 33:
+                    AudioManager.Instance.BGMplay("RL16");
+                    break;
+                case 34:
+                    AudioManager.Instance.BGMplay("RL17");
+                    break;
+                case 35:
+                    AudioManager.Instance.BGMplay("RL18");
+                    break;
+                case 36:
+                    AudioManager.Instance.BGMplay("RL19");
+                    break;
+                case 37:
+                    AudioManager.Instance.BGMplay("RL20");
+                    break;
+                default:
+                    Debug.Log("Can't Find Level Audio for Random");
+                    break;
+            }
         }
     }
 }
