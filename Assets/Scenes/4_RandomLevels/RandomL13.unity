@@ -1060,6 +1060,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!1 &426498796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 925123585502922232, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 597005964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &426498797 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2678701496266855663, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 597005964}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &450026695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3335,13 +3345,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 597005965}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1956494874}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: location
+      value: 
+      objectReference: {fileID: 426498796}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: levelText
       value: 
       objectReference: {fileID: 597005966}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: mapCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 426498797}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: mapScreen
       value: 
@@ -5114,6 +5132,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2590299373731576030, guid: c0d23c572737af645be0987da489bf12, type: 3}
   m_PrefabInstance: {fileID: 1894359750}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1956494874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4973373985594365135, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
+  m_PrefabInstance: {fileID: 805827413}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2002700307
 GameObject:

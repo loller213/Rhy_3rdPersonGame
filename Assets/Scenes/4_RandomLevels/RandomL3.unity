@@ -891,6 +891,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1242740951}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 796789779}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: location
+      value: 
+      objectReference: {fileID: 1766173863}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: levelText
       value: 
       objectReference: {fileID: 1242740952}
@@ -3339,6 +3347,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &796789779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4973373985594365135, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
+  m_PrefabInstance: {fileID: 665243835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &822218506
 Mesh:
   m_ObjectHideFlags: 0
@@ -7848,6 +7861,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1766173863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 925123585502922232, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 1242740950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1778882179
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1794,6 +1794,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 49172473ee6639841beca3e0d5d99288, type: 3}
   m_PrefabInstance: {fileID: 529711309}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &535469171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4973373985594365135, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
+  m_PrefabInstance: {fileID: 796329729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &546447210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4475,6 +4480,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4, y: 8.007211, z: 4}
   m_Center: {x: 0, y: 2.0036054, z: 0}
+--- !u!1 &1474258252 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 925123585502922232, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 567580562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1474258253 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2678701496266855663, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 567580562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1531444369
 GameObject:
   m_ObjectHideFlags: 0
@@ -4585,13 +4600,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 567580563}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 535469171}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: location
+      value: 
+      objectReference: {fileID: 1474258252}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: levelText
       value: 
       objectReference: {fileID: 567580564}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: mapCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1474258253}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: mapScreen
       value: 

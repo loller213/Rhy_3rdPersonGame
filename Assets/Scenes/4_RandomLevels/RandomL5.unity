@@ -6765,6 +6765,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8433007171189723407, guid: 96096eb40216b1c46880c1fcea213675, type: 3}
   m_PrefabInstance: {fileID: 1302490285}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1366636863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 925123585502922232, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 1538460258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1376929781
 Mesh:
   m_ObjectHideFlags: 0
@@ -7393,6 +7398,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1160662484051609987, guid: 60977f6d9ec0f7a45ab96da03e6fc570, type: 3}
   m_PrefabInstance: {fileID: 1409344622}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1430117613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4973373985594365135, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
+  m_PrefabInstance: {fileID: 2072842446}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1463022709
 PrefabInstance:
@@ -9829,6 +9839,14 @@ PrefabInstance:
       propertyPath: inventoryScreen
       value: 
       objectReference: {fileID: 1538460259}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1430117613}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: location
+      value: 
+      objectReference: {fileID: 1366636863}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: levelText
       value: 

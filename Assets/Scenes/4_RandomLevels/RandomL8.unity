@@ -875,6 +875,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &184072040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 925123585502922232, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 1546037745}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &189968822
 Mesh:
   m_ObjectHideFlags: 0
@@ -3846,6 +3851,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1418862984}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1493210019}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: location
+      value: 
+      objectReference: {fileID: 184072040}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: levelText
       value: 
       objectReference: {fileID: 1546037747}
@@ -5569,6 +5582,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5232691293605656014, guid: 641b8d2756c35a24dbdb4c7e6b2cadf4, type: 3}
   m_PrefabInstance: {fileID: 1483439801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1493210019 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4973373985594365135, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
+  m_PrefabInstance: {fileID: 1954530406}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1513523802
 PrefabInstance:
