@@ -1216,6 +1216,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01, y: 0, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &547386915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4973373985594365135, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
+  m_PrefabInstance: {fileID: 356306266}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &577480358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2985,17 +2990,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 899950646}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 547386915}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: location
+      value: 
+      objectReference: {fileID: 1231533269}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: levelText
       value: 
       objectReference: {fileID: 947479734}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: mapCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1231533271}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: mapScreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1231533270}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: charCamera
       value: 
@@ -3106,6 +3119,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8828f71ecc1251d4083057909d539cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1231533269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 925123585502922232, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 947479733}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1231533270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8003581858201537031, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 947479733}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1231533271 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2678701496266855663, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 947479733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1243803000
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6352,6 +6352,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+--- !u!1 &639903059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 925123585502922232, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 639903058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &639903060 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8127703290277612542, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
@@ -9192,6 +9197,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5997048934885830794, guid: a9064fe2bd295b04fac1b282e1ea785c, type: 3}
   m_PrefabInstance: {fileID: 1013694314}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &1018403133 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2678701496266855663, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 639903058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1043357380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10642,6 +10652,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.04, y: 0.04000001, z: 0.0005000002}
   m_Center: {x: 0, y: 0, z: -0.0002500001}
+--- !u!1 &1210804916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4973373985594365135, guid: 925fda94014ed6547b9743e65def0c70, type: 3}
+  m_PrefabInstance: {fileID: 1215344249}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1213551747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18179,13 +18194,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 639903072}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1210804916}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
+      propertyPath: location
+      value: 
+      objectReference: {fileID: 639903059}
+    - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: levelText
       value: 
       objectReference: {fileID: 639903060}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: mapCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1018403133}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: mapScreen
       value: 
