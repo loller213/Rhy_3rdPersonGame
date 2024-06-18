@@ -1385,6 +1385,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxBambo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4617737817041591928, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
+      propertyPath: colChild
+      value: 
+      objectReference: {fileID: 279350367}
     - target: {fileID: 7108916876552727612, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.000001
@@ -1434,6 +1438,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7108916876552727612, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
   m_PrefabInstance: {fileID: 140168441}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &185686203 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2218789805323529319, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
+  m_PrefabInstance: {fileID: 2791465943815960507}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &193675725
 PrefabInstance:
@@ -1981,6 +1990,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6890959609033057734, guid: ffe26d8a0cc7b694ebbebb90baeb02f0, type: 3}
   m_PrefabInstance: {fileID: 269249455}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &279350367 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2218789805323529319, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
+  m_PrefabInstance: {fileID: 140168441}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &287774359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2474,6 +2488,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6ca034cda832d3c4b8ce1ebb78fe733a, type: 3}
   m_PrefabInstance: {fileID: 363095096}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &383653611 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2218789805323529319, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
+  m_PrefabInstance: {fileID: 1841766206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &384451736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2896,6 +2915,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5232691293605656014, guid: 641b8d2756c35a24dbdb4c7e6b2cadf4, type: 3}
   m_PrefabInstance: {fileID: 384451736}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &443446763 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2218789805323529319, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
+  m_PrefabInstance: {fileID: 1407530033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &504383593 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2218789805323529319, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
+  m_PrefabInstance: {fileID: 567677789}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &507527335 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 518310046924475655, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
@@ -2995,6 +3024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxBambo (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4617737817041591928, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
+      propertyPath: colChild
+      value: 
+      objectReference: {fileID: 504383593}
     - target: {fileID: 7108916876552727612, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.000001
@@ -7356,6 +7389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxBambo (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4617737817041591928, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
+      propertyPath: colChild
+      value: 
+      objectReference: {fileID: 443446763}
     - target: {fileID: 7108916876552727612, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.000001
@@ -11311,6 +11348,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxBambo (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4617737817041591928, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
+      propertyPath: colChild
+      value: 
+      objectReference: {fileID: 383653611}
     - target: {fileID: 7108916876552727612, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.000001
@@ -12579,6 +12620,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.025
       objectReference: {fileID: 0}
+    - target: {fileID: 4617737817041591928, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
+      propertyPath: colChild
+      value: 
+      objectReference: {fileID: 185686203}
     - target: {fileID: 7108916876552727612, guid: a99539d5d760e5b4e80987c60433538f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.000001
