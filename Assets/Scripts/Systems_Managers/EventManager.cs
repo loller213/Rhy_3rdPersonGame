@@ -8,4 +8,5 @@ public class EventManager : MonoBehaviour
     //PointArea
     public static Action ON_AREA_ENTER;
     public static Action ON_AREA_LEAVE;
+
 }
