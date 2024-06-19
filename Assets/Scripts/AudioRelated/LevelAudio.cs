@@ -41,7 +41,7 @@ public class LevelAudio : MonoBehaviour
             Debug.Log("Level Scene: " + currentLevelIndex + " Medium BGM");
             AudioManager.Instance.BGMplay("Medium");
         }
-        else if (currentLevelIndex >= 17 && currentLevelIndex >= 13)
+        else if (currentLevelIndex <= 17 && currentLevelIndex >= 13)
         {
             AudioManager.Instance.BGMplay("Hard");
             Debug.Log("Level Scene: " + currentLevelIndex + " Hard BGM");
