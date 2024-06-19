@@ -20,10 +20,17 @@ public class PushBox : MonoBehaviour
     private Vector3 targetPosition;
     private bool isMoving = false;
 
+    private TriggerOutline outline;
+
     [SerializeField] private MaterialType typeOfMaterial;
     
     [SerializeField] private Collider col;
     [SerializeField] private Collider colChild;
+
+    private void Awake()
+    {
+        outline = gameObject.GetComponentInChildren<TriggerOutline>();
+    }
 
     void Start()
     {
@@ -97,6 +104,25 @@ public class PushBox : MonoBehaviour
 
             // Apply the push
             MoveToNextGridCell(roundedDirection);
+        }
+
+
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Point"))
+        {
+            outline.EnableOutline();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Point"))
+        {
+            outline.DisableOutline();
         }
     }
 
