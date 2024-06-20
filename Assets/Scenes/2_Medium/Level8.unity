@@ -836,10 +836,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 8379408223683419422, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 6618852245504821571, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1521806277}
-    - targetCorrespondingSourceObject: {fileID: 8379408223683419422, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 6618852245504821571, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
       insertIndex: -1
       addedObject: {fileID: 350062782}
     m_AddedComponents: []
@@ -1699,7 +1699,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 350754870}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2270,7 +2270,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1366634295}
-  m_Father: {fileID: 817662012}
+  m_Father: {fileID: 640549675}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2315,11 +2315,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350062781}
   m_CullTransparentMesh: 1
---- !u!1 &350754870 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8620275005421828796, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
-  m_PrefabInstance: {fileID: 78367168}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &378239862
 GameObject:
   m_ObjectHideFlags: 0
@@ -3962,6 +3957,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!224 &640549675 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6618852245504821571, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 78367168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &653895005
 Mesh:
   m_ObjectHideFlags: 0
@@ -17236,11 +17236,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5232691293605656014, guid: 641b8d2756c35a24dbdb4c7e6b2cadf4, type: 3}
   m_PrefabInstance: {fileID: 792212314}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &817662012 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8379408223683419422, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
-  m_PrefabInstance: {fileID: 78367168}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &823114290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17296,7 +17291,7 @@ PrefabInstance:
     - target: {fileID: 1251626599104446123, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: inventoryScreen
       value: 
-      objectReference: {fileID: 350754870}
+      objectReference: {fileID: 0}
     - target: {fileID: 1752248138176081063, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: player
       value: 
@@ -19497,7 +19492,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 350754870}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -20271,7 +20266,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 245198660}
-  m_Father: {fileID: 817662012}
+  m_Father: {fileID: 640549675}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -32784,6 +32779,7 @@ GameObject:
   - component: {fileID: 1792232091}
   - component: {fileID: 1792232093}
   - component: {fileID: 1792232092}
+  - component: {fileID: 1792232094}
   m_Layer: 9
   m_Name: Render
   m_TagString: Untagged
@@ -32856,6 +32852,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792232090}
   m_Mesh: {fileID: -709660204412798796, guid: 493858bc152cfd64ab19c3502fb97c2b, type: 3}
+--- !u!114 &1792232094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792232090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9661bfa67f7d1d41982b886db091bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1843339266
 GameObject:
   m_ObjectHideFlags: 0
@@ -34108,6 +34116,7 @@ GameObject:
   - component: {fileID: 2114641481}
   - component: {fileID: 2114641483}
   - component: {fileID: 2114641482}
+  - component: {fileID: 2114641484}
   m_Layer: 9
   m_Name: Render
   m_TagString: Untagged
@@ -34180,6 +34189,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114641480}
   m_Mesh: {fileID: -709660204412798796, guid: 493858bc152cfd64ab19c3502fb97c2b, type: 3}
+--- !u!114 &2114641484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114641480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9661bfa67f7d1d41982b886db091bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2117282415
 GameObject:
   m_ObjectHideFlags: 0
@@ -48303,6 +48324,7 @@ GameObject:
   - component: {fileID: 6780638317316651917}
   - component: {fileID: 962098379694415014}
   - component: {fileID: 7337123655584282475}
+  - component: {fileID: 7337123655584282476}
   m_Layer: 9
   m_Name: Render
   m_TagString: Untagged
@@ -48389,6 +48411,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7337123655584282476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7267160117561546956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9661bfa67f7d1d41982b886db091bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &7390833852559561211
 MeshRenderer:
   m_ObjectHideFlags: 0

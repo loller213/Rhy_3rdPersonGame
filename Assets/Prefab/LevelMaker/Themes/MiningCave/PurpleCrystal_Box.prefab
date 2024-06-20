@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 2646881347125501795}
   - component: {fileID: 4036089758118261833}
   - component: {fileID: 4763832476822321538}
+  - component: {fileID: 679760931329337414}
   m_Layer: 9
   m_Name: PurpleCrystal_Box
   m_TagString: BOX
@@ -206,5 +207,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1536
   moveSpeed: 20
+  typeOfMaterial: 0
   col: {fileID: 4036089758118261833}
   colChild: {fileID: 3917767054539628415}
+--- !u!114 &679760931329337414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5548965313147021941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9661bfa67f7d1d41982b886db091bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
