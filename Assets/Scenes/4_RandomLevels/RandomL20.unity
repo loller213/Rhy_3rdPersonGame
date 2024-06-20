@@ -2813,7 +2813,7 @@ PrefabInstance:
     - target: {fileID: 3922891424234145414, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: endTimerUI
       value: 
-      objectReference: {fileID: 947479744}
+      objectReference: {fileID: 1974212217}
     - target: {fileID: 4413273271487287860, guid: ba8e15619902902438f5d6eb94921fda, type: 3}
       propertyPath: winScreen
       value: 
@@ -4747,6 +4747,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1974212217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5382171904730008616, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+  m_PrefabInstance: {fileID: 947479733}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1990113277
 PrefabInstance:
   m_ObjectHideFlags: 0

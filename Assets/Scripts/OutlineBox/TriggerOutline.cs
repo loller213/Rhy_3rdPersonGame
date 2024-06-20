@@ -17,7 +17,7 @@ public class TriggerOutline : MonoBehaviour
 
     public void DisableOutline()
     {
-        this.gameObject.layer = LayerMask.NameToLayer("BOX");
+        this.gameObject.layer = LayerMask.NameToLayer("Default");
     }
 
 }
