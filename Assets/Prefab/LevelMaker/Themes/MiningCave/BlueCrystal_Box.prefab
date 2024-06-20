@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 6794853937008990324}
   - component: {fileID: 1346633674000853896}
   - component: {fileID: 3240355656216976039}
+  - component: {fileID: 3039958069124200745}
   m_Layer: 9
   m_Name: BlueCrystal_Box
   m_TagString: BOX
@@ -158,6 +159,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1536
   moveSpeed: 20
+  typeOfMaterial: 0
   col: {fileID: 1346633674000853896}
   colChild: {fileID: 4662206911192165951}
 --- !u!65 &1346633674000853896
@@ -208,3 +210,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &3039958069124200745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6616127166811841789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9661bfa67f7d1d41982b886db091bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
