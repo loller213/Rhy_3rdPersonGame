@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TriggerOutline : MonoBehaviour
 {
-
     private void Start()
     {
         DisableOutline();
