@@ -2007,6 +2007,22 @@ PrefabInstance:
       value: RestartScene
       objectReference: {fileID: 0}
     - target: {fileID: 3355690889537672332, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 0.69411767
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355690889537672332, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.4264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355690889537672332, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.4264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355690889537672332, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.4264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355690889537672332, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1130856127}
@@ -2033,6 +2049,22 @@ PrefabInstance:
     - target: {fileID: 4995350171702215989, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5293944113639234267, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 0.69411767
+      objectReference: {fileID: 0}
+    - target: {fileID: 5293944113639234267, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.4264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 5293944113639234267, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.4264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 5293944113639234267, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.4264151
       objectReference: {fileID: 0}
     - target: {fileID: 5293944113639234267, guid: 7ab0157d2fbdb9e42a44a9b6e2699b43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
